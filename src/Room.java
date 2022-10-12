@@ -16,8 +16,37 @@ public class Room implements EnergySourceConstructor {
         this.name = name;
     }
 
-    public Room(String name){
-        this.name = name;
+    public Room(){
+        this.name = "Airport";
+    }
+
+    public int getWindPot() {
+        return windPot;
+    }
+
+    public int getSunPot() {
+        return sunPot;
+    }
+
+    public int getWaterPot() {
+        return waterPot;
+    }
+
+    public int getGeoPot() {
+        return geoPot;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setExit(String neighborName, Room neighbor)
+    {
+        exits.put(neighborname, neighbor);
+    }
+
+    public ArrayList<EnergySource> getBuiltEnergySource() {
+        return builtEnergySource;
     }
 
     public void constructWindmill(){
