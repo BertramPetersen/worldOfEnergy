@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
 public class Room {
+    int hej;
     int windPot;
     int sunPot;
     int waterPot;
