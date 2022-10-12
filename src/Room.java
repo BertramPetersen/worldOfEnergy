@@ -15,6 +15,6 @@ public class Room {
     }
 
     public void constructWindmill(){
-        builtEnergySource = EnergySourceConstructer.construct("Windmill");
+        builtEnergySource.add(EnergySourceConstructer.construct("Windmill"));
     }
 }
