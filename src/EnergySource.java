@@ -1,2 +1,4 @@
-public class EnergySource {
+public abstract class EnergySource {
+
+
 }
