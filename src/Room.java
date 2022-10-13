@@ -42,7 +42,7 @@ public class Room implements EnergySourceConstructor {
 
     public void setExit(String neighborName, Room neighbor)
     {
-        exits.put(neighborname, neighbor);
+        exits.put(neighborName, neighbor);
     }
 
     public ArrayList<EnergySource> getBuiltEnergySource() {

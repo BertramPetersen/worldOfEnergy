@@ -7,6 +7,7 @@ public class Game {
 
     public Game() {
         this.turnCounter = 0;
+        createdRooms = new ArrayList<>();
         createRooms();
     }
 
@@ -33,13 +34,11 @@ public class Game {
         for (Room room : createdRooms) {
             if (!room.getName().equals("Airport")){
                 room.setExit("Airport", airport);
-            }else {
-                for (Room room1 : createdRooms){
-                    if(!room1.getName().equals("Airport")){
-                        airport.setExit(room1.getName(), room1);
-                    }
-
-                }
+            }
+        }
+        for (Room room : createdRooms){
+            if(!room.getName().equals("Airport")){
+                airport.setExit(room.getName(), room);
             }
         }
     }
