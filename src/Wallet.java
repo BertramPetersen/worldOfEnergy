@@ -18,18 +18,16 @@ public class Wallet {
     //  F.eks: Coins += input;
     //  Logikken som styrer om der er svaret korrekt på et spørgsmål, eller om der blevet bygget en energySource
     //  styres ikke af Wallet, men af de andre klasser.
-    public void addCoions() {
+    public void addCoions(int conis) {
+        this.coins= 100;
 
-if (answerCorrect){
-    addCoions();
-}
+
     }
 
 
-    public void substractCoins(){
-if ( builtEnergySource){
-    substractCoins();
-}
+    public void addCoions(int conis) {
+        this.coins= 100;
+
     }
 
     /* Her er mit bud på hvordan man skulle lave addCoins metode:
