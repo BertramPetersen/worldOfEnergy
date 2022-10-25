@@ -49,7 +49,8 @@ public class Room implements EnergySourceConstructor {
         return builtEnergySource;
     }
 
-    public void constructWindmill(){
+
+    public void constructWind(){
         WindMill windMill = (WindMill) EnergySourceConstructor.constructWind();
         if (ValidateFunds(windMill)){
             builtEnergySource.add(windMill);
