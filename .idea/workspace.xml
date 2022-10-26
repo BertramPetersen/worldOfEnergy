@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e11df0e-7c6d-41d2-92e9-8711a404ec7c" name="Changes" comment="test">
+    <list default="true" id="8e11df0e-7c6d-41d2-92e9-8711a404ec7c" name="Changes" comment="createRooms method has been added to game. Rooms now have exits which are implemented the same way as in WorldOfZuul">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Wallet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Wallet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +18,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -38,6 +41,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/bertr/OneDrive/Skrivebord/Skole/worldOfZuul&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -56,8 +60,10 @@
       <option name="presentableId" value="Default" />
       <updated>1665565894269</updated>
       <workItem from="1665565896856" duration="659000" />
-      <workItem from="1665567871919" duration="959000" />
-      <workItem from="1666548807452" duration="30000" />
+      <workItem from="1665591697131" duration="4221000" />
+      <workItem from="1665598665658" duration="3262000" />
+      <workItem from="1665603440706" duration="801000" />
+      <workItem from="1665611891884" duration="476000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1665567428682</created>
@@ -66,7 +72,35 @@
       <option name="project" value="LOCAL" />
       <updated>1665567428682</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="test">
+      <created>1665567662999</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1665567662999</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Hurtig ligegyldig opdatering">
+      <created>1665576355333</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1665576355333</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Room and EnergySourceConstructor has been built and Game, is partially build">
+      <created>1665601406648</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1665601406648</updated>
+    </task>
+    <task id="LOCAL-00005" summary="createRooms method has been added to game. Rooms now have exits which are implemented the same way as in WorldOfZuul">
+      <created>1665604010526</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1665604010526</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -85,6 +119,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="Hurtig ligegyldig opdatering" />
+    <MESSAGE value="Room and EnergySourceConstructor has been built and Game, is partially build" />
+    <MESSAGE value="createRooms method has been added to game. Rooms now have exits which are implemented the same way as in WorldOfZuul" />
+    <option name="LAST_COMMIT_MESSAGE" value="createRooms method has been added to game. Rooms now have exits which are implemented the same way as in WorldOfZuul" />
   </component>
 </project>
