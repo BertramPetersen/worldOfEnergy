@@ -60,6 +60,7 @@ public class Game {
         turnCounter++;
         Forecast.update();
         EnergyBalance.UpdateGreenEnergy(getTotalPowerOutput());
+        quiz.takeQuiz();
     }
 
     public double getTotalPowerOutput(){
@@ -73,13 +74,14 @@ public class Game {
     public void welcome(){
         System.out.println("Welcome to World of Energy");
         System.out.println();
-        System.out.println("Your job is to build sustainable energy sources " +
+        System.out.println("Your job is to build sustainable energy sources \n" +
                 "in different countries around the world, to prevent global warming from escalating.");
         System.out.println();
-        System.out.println("You can go to different countries and view their potential for different energy sources, " +
-                "and build energy sources. Beware that energy sources cost money to build. \n" +
-                "To earn money, you have to answer questions throughout the game correctly. \n" +
-                "The more sustainable energy sources you build, the more the energy balance turns in your favour.");
+        System.out.println("""
+                You can go to different countries and view their potential for different energy sources,
+                and build energy sources. Beware that energy sources cost money to build.\s
+                To earn money, you have to answer questions throughout the game correctly.\s
+                The more sustainable energy sources you build, the more the energy balance turns in your favour.""");
         System.out.println();
         System.out.println();
     }
