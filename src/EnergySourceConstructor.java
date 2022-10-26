@@ -1,21 +1,17 @@
 public interface EnergySourceConstructor {
     static EnergySource constructWind() {
-        WindMill windmill = new WindMill();
-        return windmill;
+        return new WindMill();
 
     }
     static EnergySource constructHydro() {
-        HydroPowerplant hydro = new HydroPowerplant();
-        return hydro;
+        return new HydroPowerplant();
     }
     static EnergySource constructGeo() {
-        GeothermalPowerplant geo = new GeothermalPowerplant();
-        return geo;
+        return new GeothermalPowerplant();
     }
 
     static EnergySource constructSolar(){
-        SolarPanel solarPanel = new SolarPanel();
-        return solarPanel;
+        return new SolarPanel();
     }
 
     boolean ValidateFunds(EnergySource e);

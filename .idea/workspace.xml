@@ -4,9 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e11df0e-7c6d-41d2-92e9-8711a404ec7c" name="Changes" comment="createRooms method has been added to game. Rooms now have exits which are implemented the same way as in WorldOfZuul">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Room.java" afterDir="false" />
+    <list default="true" id="8e11df0e-7c6d-41d2-92e9-8711a404ec7c" name="Changes" comment="Fucking mange ændringer 25-10-2022">
+      <change beforePath="$PROJECT_DIR$/src/EnergySourceConstructor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EnergySourceConstructor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    </list>
+    <list id="4eddf5a6-7a71-43a6-8e5d-3e41453c2254" name="Changes by Kenny" comment="">
+      <change beforePath="$PROJECT_DIR$/src/EnergyBalance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EnergyBalance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Forecast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Forecast.java" afterDir="false" />
+    </list>
+    <list id="c15efa6b-34fd-4847-aa10-09aba8121368" name="Changes by mac" comment="">
+      <change beforePath="$PROJECT_DIR$/src/EnergySource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EnergySource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GeothermalPowerplant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeothermalPowerplant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HydroPowerplant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HydroPowerplant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SolarPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SolarPanel.java" afterDir="false" />
+    </list>
+    <list id="4dadb8a0-0bfa-4523-a95e-9aa54500e4c8" name="Changes by marcu" comment="Den sidste version efter vi afsluttede 25-10-2022">
+      <change beforePath="$PROJECT_DIR$/src/Quiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RandomEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RandomEvent.java" afterDir="false" />
+    </list>
+    <list id="9eba1b26-d792-4e21-85f7-bb1d205792d1" name="Changes by wesambaroudi" comment="">
+      <change beforePath="$PROJECT_DIR$/src/EnergySource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EnergySource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Wallet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Wallet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,13 +35,22 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/EnergySource.java">
+      <ranges>
+        <range start1="1" end1="1" start2="1" end2="4" changelist="c15efa6b-34fd-4847-aa10-09aba8121368" />
+        <range start1="3" end1="3" start2="6" end2="10" changelist="c15efa6b-34fd-4847-aa10-09aba8121368" />
+        <range start1="4" end1="4" start2="11" end2="12" changelist="9eba1b26-d792-4e21-85f7-bb1d205792d1" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -41,7 +68,8 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/bertr/OneDrive/Skrivebord/Skole/worldOfZuul&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/bertr/OneDrive/Skrivebord&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -64,6 +92,8 @@
       <workItem from="1665598665658" duration="3262000" />
       <workItem from="1665603440706" duration="801000" />
       <workItem from="1665611891884" duration="476000" />
+      <workItem from="1666731541078" duration="531000" />
+      <workItem from="1666779169363" duration="1030000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1665567428682</created>
@@ -100,7 +130,21 @@
       <option name="project" value="LOCAL" />
       <updated>1665604010526</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Wallet er blevet gjort static og der er lavet rettelser">
+      <created>1666682591641</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1666682591641</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Fucking mange ændringer 25-10-2022">
+      <created>1666779223504</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1666779223504</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,6 +166,11 @@
     <MESSAGE value="Hurtig ligegyldig opdatering" />
     <MESSAGE value="Room and EnergySourceConstructor has been built and Game, is partially build" />
     <MESSAGE value="createRooms method has been added to game. Rooms now have exits which are implemented the same way as in WorldOfZuul" />
-    <option name="LAST_COMMIT_MESSAGE" value="createRooms method has been added to game. Rooms now have exits which are implemented the same way as in WorldOfZuul" />
+    <MESSAGE value="Wallet er blevet gjort static og der er lavet rettelser" />
+    <MESSAGE value="Changes by marcu" />
+    <MESSAGE value="flere ændringer" />
+    <MESSAGE value="Den sidste version efter vi afsluttede 25-10-2022" />
+    <MESSAGE value="Fucking mange ændringer 25-10-2022" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fucking mange ændringer 25-10-2022" />
   </component>
 </project>
