@@ -4,12 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e11df0e-7c6d-41d2-92e9-8711a404ec7c" name="Changes" comment="Fucking mange ændringer 25-10-2022">
-      <change beforePath="$PROJECT_DIR$/src/EnergySourceConstructor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EnergySourceConstructor.java" afterDir="false" />
+    <list default="true" id="8e11df0e-7c6d-41d2-92e9-8711a404ec7c" name="Changes" comment="Warnings er blevet fjernet. Og quiz strings er blevet erstattet med 'tekstblokke'.">
+      <change afterPath="$PROJECT_DIR$/src/textUI/CommandLineClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20-10-2022_20_26_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20-10-2022_20_26__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_25-10-2022_09_16_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_25-10-2022_09_16__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
-    <list id="4eddf5a6-7a71-43a6-8e5d-3e41453c2254" name="Changes by Kenny" comment="">
+    <list id="4eddf5a6-7a71-43a6-8e5d-3e41453c2254" name="Changes by Kenny" comment="Changes by Kenny">
       <change beforePath="$PROJECT_DIR$/src/EnergyBalance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EnergyBalance.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Forecast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Forecast.java" afterDir="false" />
     </list>
@@ -31,6 +35,9 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -93,7 +100,10 @@
       <workItem from="1665603440706" duration="801000" />
       <workItem from="1665611891884" duration="476000" />
       <workItem from="1666731541078" duration="531000" />
-      <workItem from="1666779169363" duration="1030000" />
+      <workItem from="1666779169363" duration="1529000" />
+      <workItem from="1666988487385" duration="212000" />
+      <workItem from="1667295215595" duration="315000" />
+      <workItem from="1667309374833" duration="774000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1665567428682</created>
@@ -144,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666779223504</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Warnings er blevet fjernet. Og quiz strings er blevet erstattet med 'tekstblokke'.">
+      <created>1666780243775</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1666780243775</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,6 +188,7 @@
     <MESSAGE value="flere ændringer" />
     <MESSAGE value="Den sidste version efter vi afsluttede 25-10-2022" />
     <MESSAGE value="Fucking mange ændringer 25-10-2022" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fucking mange ændringer 25-10-2022" />
+    <MESSAGE value="Warnings er blevet fjernet. Og quiz strings er blevet erstattet med 'tekstblokke'." />
+    <option name="LAST_COMMIT_MESSAGE" value="Warnings er blevet fjernet. Og quiz strings er blevet erstattet med 'tekstblokke'." />
   </component>
 </project>
