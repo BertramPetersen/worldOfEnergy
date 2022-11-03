@@ -1,3 +1,5 @@
+package mainDir;
+
 public class Forecast extends EnergyBalance {
 
     static double seaLevel = 9.7; //enhed cm

@@ -4,32 +4,48 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e11df0e-7c6d-41d2-92e9-8711a404ec7c" name="Changes" comment="Warnings er blevet fjernet. Og quiz strings er blevet erstattet med 'tekstblokke'.">
-      <change afterPath="$PROJECT_DIR$/src/textUI/CommandLineClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20-10-2022_20_26_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20-10-2022_20_26__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_25-10-2022_09_16_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_25-10-2022_09_16__Changes_.xml" beforeDir="false" />
+    <list default="true" id="8e11df0e-7c6d-41d2-92e9-8711a404ec7c" name="Changes" comment="Changes by Kenny">
+      <change afterPath="$PROJECT_DIR$/src/mainDir/Command.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mainDir/CommandImplementation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mainDir/CommandWords.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mainDir/CommandWordsImplementation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mainDir/Commands.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mainDir/EnergyBalance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mainDir/EnergySource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mainDir/GeothermalPowerplant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mainDir/HydroPowerplant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mainDir/Quiz.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mainDir/RandomEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mainDir/SolarPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mainDir/WindMill.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mainDir/textUI/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mainDir/textUI/CommandLineClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mainDir/textUI/Parser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EnergySource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EnergySourceConstructor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/EnergySourceConstructor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Forecast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/Forecast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/Question.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Wallet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/Wallet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WindMill.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/worldOfEnergy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/worldOfEnergy.iml" afterDir="false" />
     </list>
     <list id="4eddf5a6-7a71-43a6-8e5d-3e41453c2254" name="Changes by Kenny" comment="Changes by Kenny">
-      <change beforePath="$PROJECT_DIR$/src/EnergyBalance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EnergyBalance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Forecast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Forecast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EnergyBalance.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/Room.java" afterDir="false" />
     </list>
     <list id="c15efa6b-34fd-4847-aa10-09aba8121368" name="Changes by mac" comment="">
-      <change beforePath="$PROJECT_DIR$/src/EnergySource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EnergySource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GeothermalPowerplant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeothermalPowerplant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HydroPowerplant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HydroPowerplant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SolarPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SolarPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GeothermalPowerplant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HydroPowerplant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SolarPanel.java" beforeDir="false" />
     </list>
-    <list id="4dadb8a0-0bfa-4523-a95e-9aa54500e4c8" name="Changes by marcu" comment="Den sidste version efter vi afsluttede 25-10-2022">
-      <change beforePath="$PROJECT_DIR$/src/Quiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RandomEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RandomEvent.java" afterDir="false" />
-    </list>
-    <list id="9eba1b26-d792-4e21-85f7-bb1d205792d1" name="Changes by wesambaroudi" comment="">
-      <change beforePath="$PROJECT_DIR$/src/EnergySource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EnergySource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Wallet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Wallet.java" afterDir="false" />
+    <list id="4dadb8a0-0bfa-4523-a95e-9aa54500e4c8" name="Changes by marcu" comment="lidt mere">
+      <change beforePath="$PROJECT_DIR$/src/Quiz.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RandomEvent.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,8 +58,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -51,16 +68,63 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/EnergySource.java">
+    <file path="$PROJECT_DIR$/src/mainDir/Room.java">
       <ranges>
-        <range start1="1" end1="1" start2="1" end2="4" changelist="c15efa6b-34fd-4847-aa10-09aba8121368" />
-        <range start1="3" end1="3" start2="6" end2="10" changelist="c15efa6b-34fd-4847-aa10-09aba8121368" />
-        <range start1="4" end1="4" start2="11" end2="12" changelist="9eba1b26-d792-4e21-85f7-bb1d205792d1" />
+        <range start1="0" end1="0" start2="0" end2="2" changelist="8e11df0e-7c6d-41d2-92e9-8711a404ec7c" />
+        <range start1="8" end1="9" start2="10" end2="11" changelist="8e11df0e-7c6d-41d2-92e9-8711a404ec7c" />
+        <range start1="21" end1="22" start2="23" end2="24" changelist="4eddf5a6-7a71-43a6-8e5d-3e41453c2254" />
+        <range start1="45" end1="47" start2="47" end2="48" changelist="4eddf5a6-7a71-43a6-8e5d-3e41453c2254" />
+        <range start1="49" end1="49" start2="50" end2="55" changelist="8e11df0e-7c6d-41d2-92e9-8711a404ec7c" />
+        <range start1="54" end1="56" start2="60" end2="74" changelist="4eddf5a6-7a71-43a6-8e5d-3e41453c2254" />
+        <range start1="57" end1="58" start2="75" end2="76" changelist="4eddf5a6-7a71-43a6-8e5d-3e41453c2254" />
+        <range start1="60" end1="62" start2="78" end2="82" changelist="8e11df0e-7c6d-41d2-92e9-8711a404ec7c" />
+        <range start1="65" end1="66" start2="85" end2="87" changelist="4eddf5a6-7a71-43a6-8e5d-3e41453c2254" />
+        <range start1="67" end1="68" start2="88" end2="89" changelist="4eddf5a6-7a71-43a6-8e5d-3e41453c2254" />
+        <range start1="70" end1="71" start2="91" end2="93" changelist="4eddf5a6-7a71-43a6-8e5d-3e41453c2254" />
+        <range start1="72" end1="72" start2="94" end2="95" changelist="4eddf5a6-7a71-43a6-8e5d-3e41453c2254" />
+        <range start1="76" end1="77" start2="99" end2="101" changelist="4eddf5a6-7a71-43a6-8e5d-3e41453c2254" />
+        <range start1="78" end1="79" start2="102" end2="103" changelist="4eddf5a6-7a71-43a6-8e5d-3e41453c2254" />
+        <range start1="81" end1="82" start2="105" end2="107" changelist="4eddf5a6-7a71-43a6-8e5d-3e41453c2254" />
+        <range start1="83" end1="83" start2="108" end2="109" changelist="8e11df0e-7c6d-41d2-92e9-8711a404ec7c" />
+        <range start1="85" end1="86" start2="111" end2="113" changelist="4eddf5a6-7a71-43a6-8e5d-3e41453c2254" />
+        <range start1="87" end1="88" start2="114" end2="115" changelist="4eddf5a6-7a71-43a6-8e5d-3e41453c2254" />
+        <range start1="90" end1="91" start2="117" end2="119" changelist="4eddf5a6-7a71-43a6-8e5d-3e41453c2254" />
+        <range start1="92" end1="92" start2="120" end2="121" changelist="4eddf5a6-7a71-43a6-8e5d-3e41453c2254" />
+        <range start1="96" end1="98" start2="125" end2="127" changelist="4eddf5a6-7a71-43a6-8e5d-3e41453c2254" />
+        <range start1="100" end1="103" start2="129" end2="135" changelist="4eddf5a6-7a71-43a6-8e5d-3e41453c2254" />
+        <range start1="104" end1="106" start2="136" end2="138" changelist="4eddf5a6-7a71-43a6-8e5d-3e41453c2254" />
+        <range start1="107" end1="108" start2="139" end2="140" changelist="4eddf5a6-7a71-43a6-8e5d-3e41453c2254" />
+        <range start1="117" end1="118" start2="149" end2="152" changelist="4eddf5a6-7a71-43a6-8e5d-3e41453c2254" />
+        <range start1="119" end1="124" start2="153" end2="158" changelist="4eddf5a6-7a71-43a6-8e5d-3e41453c2254" />
+        <range start1="125" end1="126" start2="159" end2="219" changelist="4eddf5a6-7a71-43a6-8e5d-3e41453c2254" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/mainDir/Game.java">
+      <ranges>
+        <range start1="0" end1="0" start2="0" end2="2" changelist="8e11df0e-7c6d-41d2-92e9-8711a404ec7c" />
+        <range start1="2" end1="2" start2="4" end2="6" changelist="8e11df0e-7c6d-41d2-92e9-8711a404ec7c" />
+        <range start1="4" end1="5" start2="8" end2="9" changelist="8e11df0e-7c6d-41d2-92e9-8711a404ec7c" />
+        <range start1="7" end1="7" start2="11" end2="12" changelist="8e11df0e-7c6d-41d2-92e9-8711a404ec7c" />
+        <range start1="13" end1="13" start2="18" end2="21" changelist="8e11df0e-7c6d-41d2-92e9-8711a404ec7c" />
+        <range start1="14" end1="18" start2="22" end2="23" changelist="8e11df0e-7c6d-41d2-92e9-8711a404ec7c" />
+        <range start1="39" end1="39" start2="44" end2="45" changelist="8e11df0e-7c6d-41d2-92e9-8711a404ec7c" />
+        <range start1="41" end1="42" start2="47" end2="49" changelist="8e11df0e-7c6d-41d2-92e9-8711a404ec7c" />
+        <range start1="43" end1="43" start2="50" end2="51" changelist="8e11df0e-7c6d-41d2-92e9-8711a404ec7c" />
+        <range start1="45" end1="45" start2="53" end2="55" changelist="8e11df0e-7c6d-41d2-92e9-8711a404ec7c" />
+        <range start1="51" end1="53" start2="61" end2="63" changelist="8e11df0e-7c6d-41d2-92e9-8711a404ec7c" />
+        <range start1="57" end1="57" start2="67" end2="99" changelist="8e11df0e-7c6d-41d2-92e9-8711a404ec7c" />
+        <range start1="61" end1="61" start2="103" end2="106" changelist="8e11df0e-7c6d-41d2-92e9-8711a404ec7c" />
+        <range start1="72" end1="72" start2="117" end2="122" changelist="8e11df0e-7c6d-41d2-92e9-8711a404ec7c" />
+        <range start1="73" end1="85" start2="123" end2="162" changelist="8e11df0e-7c6d-41d2-92e9-8711a404ec7c" />
+        <range start1="86" end1="87" start2="163" end2="175" changelist="4eddf5a6-7a71-43a6-8e5d-3e41453c2254" />
       </ranges>
     </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2G1pMCKuLBQ98AxykGLFbg0ipD3" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -70,22 +134,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/bertr/OneDrive/Skrivebord&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "last_opened_file_path": "C:/Users/bertr/OneDrive/Skrivebord/Skole/SemesterProjekt/worldOfEnergy/src",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="mainDir" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\bertr\OneDrive\Skrivebord\Skole\SemesterProjekt\worldOfEnergy\src" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -104,6 +177,9 @@
       <workItem from="1666988487385" duration="212000" />
       <workItem from="1667295215595" duration="315000" />
       <workItem from="1667309374833" duration="774000" />
+      <workItem from="1667459768205" duration="1394000" />
+      <workItem from="1667461422249" duration="10785000" />
+      <workItem from="1667474697952" duration="10998000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1665567428682</created>
@@ -161,7 +237,21 @@
       <option name="project" value="LOCAL" />
       <updated>1666780243775</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="opdateret spil">
+      <created>1667460059392</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1667460059392</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Changes by Kenny">
+      <created>1667460248149</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1667460248149</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,7 +262,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="worldOfEnergy/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -189,6 +291,20 @@
     <MESSAGE value="Den sidste version efter vi afsluttede 25-10-2022" />
     <MESSAGE value="Fucking mange ændringer 25-10-2022" />
     <MESSAGE value="Warnings er blevet fjernet. Og quiz strings er blevet erstattet med 'tekstblokke'." />
-    <option name="LAST_COMMIT_MESSAGE" value="Warnings er blevet fjernet. Og quiz strings er blevet erstattet med 'tekstblokke'." />
+    <MESSAGE value="opdateret spil" />
+    <MESSAGE value="lidt mere" />
+    <MESSAGE value="Changes by Kenny" />
+    <MESSAGE value="textUI er tilføjet. Der mangler kommandoer til at bygge energikilder og til at opdatere turnCounter" />
+    <option name="LAST_COMMIT_MESSAGE" value="textUI er tilføjet. Der mangler kommandoer til at bygge energikilder og til at opdatere turnCounter" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

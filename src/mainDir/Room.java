@@ -1,3 +1,5 @@
+package mainDir;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -6,7 +8,7 @@ public class Room implements EnergySourceConstructor {
     String name;
 
     ArrayList<EnergySource> builtEnergySource = new ArrayList<>();
-    HashMap<String, Room> exits = new HashMap<>();
+    private HashMap<String, Room> exits = new HashMap<>();
 
     double realPowerOutput;
 
@@ -48,6 +50,11 @@ public class Room implements EnergySourceConstructor {
         exits.put(neighborName, neighbor);
     }
 
+    public Room getExit(String destination) {
+        System.out.println(destination);
+        return this.exits.get(destination);
+    }
+
     public ArrayList<EnergySource> getBuiltEnergySource() {
         return builtEnergySource;
     }
@@ -58,8 +65,10 @@ public class Room implements EnergySourceConstructor {
         if (ValidateFunds(windMill)){
             builtEnergySource.add(windMill);
             updateOutput();
-        }else{
-            System.out.println("Insufficient funds for purchase of WindMill");
+            return true;
+        } else {
+            System.out.println("Insufficient funds for purchase of worldOfEnergy.WindMill");
+            return false;
         }
 
     }
@@ -81,6 +90,7 @@ public class Room implements EnergySourceConstructor {
             updateOutput();
         }else{
             System.out.println("Insufficient funds for purchase of Solar Panel");
+            return false;
         }
     }
     public void constructGeoTherm(){

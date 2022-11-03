@@ -1,3 +1,5 @@
+package mainDir;
+
 public interface EnergySourceConstructor {
     static EnergySource constructWind() {
         return new WindMill();
