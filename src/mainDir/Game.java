@@ -92,11 +92,11 @@ public class Game {
     public void getRoomDescription() {
         if(this.location.getName().equals("Airport")){
             System.out.println("You are now at the airport, and can go to any region in World of Energy");
-            System.out.println("You can go to any of these destination:");
-            for(Room room : createdRooms){
-                if(!room.getName().contains("Airport")){
-                    System.out.println(room.getName());
-                }
+            System.out.println("You can go to any of these destination by typing 'go to' " +
+                    "plus any of the below destinations");
+            // Prints all rooms except Airport as it is the last index
+            for (int i = 0; i < createdRooms.size()-2; i=i+2) {
+                System.out.printf("%-24s %s\n", createdRooms.get(i).getName(), createdRooms.get(i+1).getName());
             }
         }else{
             location.getLongDescription();
@@ -123,57 +123,56 @@ public class Game {
         }
         return p;
     }
-
-    public void promptEnterKey(){
-        Scanner scanner = new Scanner(System.in);
-        scanner.nextLine();
-    }
-
     public void welcome(){
         System.out.println("Welcome to World of Energy\n" +
-                "Press \"ENTER\" to continue...");
+                "Press \"Any Key\" to continue...");
         promptEnterKey();
         System.out.println("Do you want an introduction to World of Energy?\n" +
                 "Y/N");
         Scanner scanner = new Scanner(System.in);
         if (!scanner.hasNext("N")){
-
             System.out.println("A turn-based game where you have to save the world from global warming...");
             promptEnterKey();
             System.out.println("Your job is to build sustainable energy sources in different countries around the world, to prevent global warming from escalating...");
             promptEnterKey();
             System.out.println("You can go to different countries and view their potential for different energy sources and build energy sources...");
             promptEnterKey();
-            System.out.println("""
-                    There is 4 energy sources each of which have their own “construction” you can build to take advantage of their respective energy potential:
-                    Wind = Windmills
-                    Solar = Solar panels
-                    Water = Hydropower plant
-                    Earth = Geothermal power plant""");
+            System.out.println("There is 4 energy sources each of which have their own “construction” you can build to take advantage of their respective energy potential:");
+            System.out.printf("%-32s %s\n", "Wind = Windmill", "Solar = Solar Panel");
+            System.out.printf("%-32s %s\n", "Water = Hydro Powerplant", "Geothermal = Geo Powerplant");
             promptEnterKey();
             System.out.println("The more sustainable energy sources you build, the more favorable the energy balance will become...");
-            promptEnterKey();
+            System.out.println();
             System.out.println("But what is this so called energy balance?");
             promptEnterKey();
-            System.out.println("Throughout the game you'll see an energy balance. If the cumulative amount of fossil energy is greater than the cumulative amount of green energy, then the sea level, temperature and CO2 levels will rise...");
+            System.out.println("Throughout the game you'll see an energy balance. If the cumulative amount of fossil energy is greater than the cumulative amount of green energy,\n" +
+                    "then the sea level, temperature and CO2 levels will rise...");
             promptEnterKey();
             System.out.println("But...");
             promptEnterKey();
             System.out.println("If the cumulative amount of green energy is greater than the cumulative amount of fossil energy, then the sea level, temperature and CO2 levels will decrease...");
-            promptEnterKey();
+            System.out.println();
             System.out.println("So what is the catch you think?");
             promptEnterKey();
             System.out.println("Energy sources cost money to build!");
             promptEnterKey();
             System.out.println("There are different ways to earn money...");
-            promptEnterKey();
+            System.out.println();
             System.out.println("You can energy source to passively earn you money. You can also earn additional money by correctly answering the quiz questions, which will appear after you have finished your turn.");
             promptEnterKey();
+            System.out.println("You can now begin to populate World of Energy with renewable energy sources to tilt the energy balance in your favor");
+            getRoomDescription();
         }
+    }
+
+    public void promptEnterKey(){
+        Scanner scanner = new Scanner(System.in);
+        scanner.nextLine();
     }
     public boolean construct(String type){
         return this.location.constructEnergy(type);
     }
+    public String whereAmI(){return location.getName();}
     public boolean quit(Command command) {
         return !command.hasCommandValue();
     }

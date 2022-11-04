@@ -79,9 +79,10 @@ public class Room implements EnergySourceConstructor {
         if (ValidateFunds(windMill)) {
             builtEnergySource.add(windMill);
             updateOutput();
+            EnergySourceConstructor.printWindmill();
             return true;
         } else {
-            System.out.println("Insufficient funds for purchase of worldOfEnergy.WindMill");
+            System.out.println("Insufficient funds for purchase of WindMill");
             return false; // returns false to tell that player has insufficient funds
         }
 

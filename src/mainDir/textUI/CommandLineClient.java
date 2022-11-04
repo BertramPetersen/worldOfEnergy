@@ -31,10 +31,11 @@ public class CommandLineClient {
 
         if (commandWord == Commands.UNKNOWN) {
             System.out.println("I don't recognize this command... :/");
+            System.out.println("Type 'help' to see your command options");
             return false;
         }
         if (commandWord == Commands.HELP) {
-            System.out.println("Your commandwords are:");
+            System.out.printf("You are at %s And your command words are: \n ", game.whereAmI());
             printHelp();
             System.out.println("You have: "+Wallet.getCoins()+" Coins");
         } else if (commandWord == Commands.GO_TO){
