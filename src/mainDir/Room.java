@@ -21,7 +21,7 @@ public class Room implements EnergySourceConstructor {
         this.realPowerOutput = 0;
     }
 
-    public Room(){
+    public Room() {
         this.name = "Airport";
     }
 
@@ -45,8 +45,7 @@ public class Room implements EnergySourceConstructor {
         return name;
     }
 
-    public void setExit(String neighborName, Room neighbor)
-    {
+    public void setExit(String neighborName, Room neighbor) {
         exits.put(neighborName, neighbor);
     }
 
@@ -59,10 +58,22 @@ public class Room implements EnergySourceConstructor {
         return builtEnergySource;
     }
 
-
-    public void constructWind(){
+    public boolean constructEnergy(String type){
+        if (type.contains("Windmill")){
+            return constructWind();
+        }else if (type.contains("Hydro Powerplant")){
+            return constructHydro();
+        }else if (type.contains("Solar Panel")){
+            return constructSolar();
+        }
+        else if (type.contains("Geo Powerplant")) {
+            return constructGeoTherm();
+        }
+        return false;
+    }
+    public boolean constructWind() {
         WindMill windMill = (WindMill) EnergySourceConstructor.constructWind();
-        if (ValidateFunds(windMill)){
+        if (ValidateFunds(windMill)) {
             builtEnergySource.add(windMill);
             updateOutput();
             return true;
@@ -72,50 +83,61 @@ public class Room implements EnergySourceConstructor {
         }
 
     }
-    public void constructHydro(){
+
+    public boolean constructHydro() {
         HydroPowerplant source = (HydroPowerplant) EnergySourceConstructor.constructHydro();
-        if (ValidateFunds(source)){
+        if (ValidateFunds(source)) {
             builtEnergySource.add(source);
             updateOutput();
-        }else{
+            return true;
+        } else {
             System.out.println("Insufficient funds for purchase of Hydro Power Plant");
+            return false;
         }
 
 
     }
-    public void constructSolar(){
+
+    public boolean constructSolar() {
         SolarPanel source = (SolarPanel) EnergySourceConstructor.constructSolar();
-        if (ValidateFunds(source)){
+        if (ValidateFunds(source)) {
             builtEnergySource.add(source);
             updateOutput();
-        }else{
+            return true;
+        } else {
             System.out.println("Insufficient funds for purchase of Solar Panel");
             return false;
         }
     }
-    public void constructGeoTherm(){
+
+    public boolean constructGeoTherm() {
         GeothermalPowerplant source = (GeothermalPowerplant) EnergySourceConstructor.constructGeo();
-        if (ValidateFunds(source)){
+        if (ValidateFunds(source)) {
             builtEnergySource.add(source);
             updateOutput();
-        }else{
+            return true;
+        } else {
             System.out.println("Insufficient funds for purchase of Geothermal Power Plant");
+            return false;
         }
     }
 
     @Override
-    public boolean ValidateFunds(EnergySource e){
-        if (Wallet.getCoins() > e.getPrice()){
+    public boolean ValidateFunds(EnergySource e) {
+        if (Wallet.getCoins() > e.getPrice()) {
             Wallet.subtractCoins(e.getPrice());
             return true;
-        } else{return false;}
+        } else {
+            return false;
+        }
     }
-    public void updateOutput(){
+
+    public void updateOutput() {
         this.realPowerOutput = 0;
-        for(EnergySource source : builtEnergySource){
-            if (source instanceof WindMill){
+        for (EnergySource source : builtEnergySource) {
+            if (source instanceof WindMill) {
                 this.realPowerOutput += source.output * this.windPot;
-            }else if (source instanceof HydroPowerplant){
+            } else if (source instanceof HydroPowerplant) {
                 this.realPowerOutput += source.output * this.waterPot;
             } else if (source instanceof SolarPanel) {
                 this.realPowerOutput += source.output * this.sunPot;
@@ -125,12 +147,73 @@ public class Room implements EnergySourceConstructor {
         }
     }
 
-    public double getRealPowerOutput(){ return this.realPowerOutput; }
+    public double getRealPowerOutput() {
+        return this.realPowerOutput;
+    }
 
-    public void viewPotentials(){
-        System.out.println("The potential for Wind Energy is: "+windPot);
-        System.out.println("The potential for Hydro Energy is: "+waterPot);
-        System.out.println("The potential for Solar Energy is: "+sunPot);
-        System.out.println("The potential for Geothermal Energy is: "+geoPot);
+    public void viewPotentials() {
+        System.out.println("The potential for Wind Energy is: " + windPot);
+        System.out.println("The potential for Hydro Energy is: " + waterPot);
+        System.out.println("The potential for Solar Energy is: " + sunPot);
+        System.out.println("The potential for Geothermal Energy is: " + geoPot);
+    }
+
+    public void getLongDescription() {
+        System.out.println("Welcome to " + this.name);
+        System.out.println("This room has potentiel for: ");
+        System.out.println("wind potential: " + this.windPot);
+        System.out.println("geo potential: " + this.geoPot);
+        System.out.println("solar potential: " + this.sunPot);
+        System.out.println("water potential: " + this.waterPot);
+        System.out.println("This room currently have:");
+        System.out.println("This country has the following energy sources:");
+        System.out.println("Windmills: "+ getWindmillCount());
+        System.out.println("Geoplants: "+getGeoplantCount());
+        System.out.println("Solarpanels: "+getSolarPanelCount());
+        System.out.println("Waterplants: "+getWaterplantCount());
+    }
+
+    public int getWindmillCount() {
+        int windMillCounter = 0;
+        for (EnergySource energySource : builtEnergySource) {
+            if (energySource instanceof WindMill) {
+                windMillCounter++;
+            }
+        }
+        return windMillCounter;
+    }
+
+    public int getGeoplantCount() {
+        int GeoplantConter = 0;
+        for (EnergySource energySource : builtEnergySource) {
+            if (energySource instanceof GeothermalPowerplant) {
+                GeoplantConter++;
+            }
+        }
+        return GeoplantConter;
+    }
+
+
+    public int getSolarPanelCount() {
+        int solarPanelCounter = 0;
+        for (EnergySource energySource : builtEnergySource) {
+            if (energySource instanceof SolarPanel) {
+                solarPanelCounter++;
+            }
+        }
+        return solarPanelCounter;
+    }
+
+    public int getWaterplantCount() {
+        int WaterplantCounter = 0;
+        for (EnergySource energySource : builtEnergySource) {
+            if (energySource instanceof HydroPowerplant) {
+                WaterplantCounter++;
+            }
+        }
+        return WaterplantCounter;
     }
 }
+
+
+

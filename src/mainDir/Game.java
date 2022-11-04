@@ -161,5 +161,16 @@ public class Game {
             promptEnterKey();
         }
     }
-
+    public boolean construct(String type){
+        if (this.location.constructEnergy(type)){
+            return true;
+        }else {return false;}
+    }
+    public boolean quit(Command command) {
+        if (command.hasCommandValue()) {
+            return false;
+        } else {
+            return true;
+        }
+    }
 }
