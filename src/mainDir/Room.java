@@ -50,7 +50,6 @@ public class Room implements EnergySourceConstructor {
     }
 
     public Room getExit(String destination) {
-        System.out.println(destination);
         return this.exits.get(destination);
     }
 
@@ -59,17 +58,21 @@ public class Room implements EnergySourceConstructor {
     }
 
     public boolean constructEnergy(String type){
-        if (type.contains("Windmill")){
+        if (type.equalsIgnoreCase("Windmill")){
             return constructWind();
-        }else if (type.contains("Hydro Powerplant")){
+        }else if (type.equalsIgnoreCase("Hydro Powerplant")){
             return constructHydro();
-        }else if (type.contains("Solar Panel")){
+        }else if (type.equalsIgnoreCase("Solar Panel")){
             return constructSolar();
-        }
-        else if (type.contains("Geo Powerplant")) {
+        }else if (type.equalsIgnoreCase("Geo Powerplant")) {
             return constructGeoTherm();
         }
-        return false;
+        System.out.println("I'm not sure what you mean. Did you type a valid Power Source to build?");
+        System.out.println("You can build any of these energy sources: ");
+        for (int i = 0; i < 2; i++) {
+            System.out.printf("%-16s %s\n", types[i], types[i + 1]);
+        }
+        return false; // Returns false to confirm that no energy source has been built
     }
     public boolean constructWind() {
         WindMill windMill = (WindMill) EnergySourceConstructor.constructWind();
@@ -79,7 +82,7 @@ public class Room implements EnergySourceConstructor {
             return true;
         } else {
             System.out.println("Insufficient funds for purchase of worldOfEnergy.WindMill");
-            return false;
+            return false; // returns false to tell that player has insufficient funds
         }
 
     }
@@ -91,8 +94,8 @@ public class Room implements EnergySourceConstructor {
             updateOutput();
             return true;
         } else {
-            System.out.println("Insufficient funds for purchase of Hydro Power Plant");
-            return false;
+            System.out.println("Insufficient funds for purchase of Hydro Powerplant");
+            return false; // returns false to tell that player has insufficient funds
         }
 
 
@@ -106,7 +109,7 @@ public class Room implements EnergySourceConstructor {
             return true;
         } else {
             System.out.println("Insufficient funds for purchase of Solar Panel");
-            return false;
+            return false; // returns false to tell that player has insufficient funds
         }
     }
 
@@ -118,7 +121,7 @@ public class Room implements EnergySourceConstructor {
             return true;
         } else {
             System.out.println("Insufficient funds for purchase of Geothermal Power Plant");
-            return false;
+            return false; // returns false to tell that player has insufficient funds
         }
     }
 
@@ -151,12 +154,6 @@ public class Room implements EnergySourceConstructor {
         return this.realPowerOutput;
     }
 
-    public void viewPotentials() {
-        System.out.println("The potential for Wind Energy is: " + windPot);
-        System.out.println("The potential for Hydro Energy is: " + waterPot);
-        System.out.println("The potential for Solar Energy is: " + sunPot);
-        System.out.println("The potential for Geothermal Energy is: " + geoPot);
-    }
 
     public void getLongDescription() {
         System.out.println("Welcome to " + this.name);

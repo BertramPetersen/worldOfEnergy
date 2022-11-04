@@ -70,7 +70,6 @@ public class Game {
         if (!command.hasCommandValue()) {
             // No destination on command.
             // Can't continue with GO_TO command.
-            System.out.println("command does not have commandValue");
             return false;
         }
         String destination = command.getCommandValue();
@@ -91,7 +90,17 @@ public class Game {
         return new CommandImplementation(commands.getCommand(word1), word2);
     }
     public void getRoomDescription() {
-        location.getLongDescription();
+        if(this.location.getName().equals("Airport")){
+            System.out.println("You are now at the airport, and can go to any region in World of Energy");
+            System.out.println("You can go to any of these destination:");
+            for(Room room : createdRooms){
+                if(!room.getName().contains("Airport")){
+                    System.out.println(room.getName());
+                }
+            }
+        }else{
+            location.getLongDescription();
+        }
     }
     public List<String> getCommandDescription(){
         System.out.println(this.location.getName());
@@ -135,11 +144,12 @@ public class Game {
             promptEnterKey();
             System.out.println("You can go to different countries and view their potential for different energy sources and build energy sources...");
             promptEnterKey();
-            System.out.println("There is 4 energy sources each of which have their own “construction” you can build to take advantage of their respective energy potential:\n" +
-                    "Wind = Windmills\n" +
-                    "Solar = Solar panels\n" +
-                    "Water = Hydropower plant\n" +
-                    "Earth = Geothermal power plant");
+            System.out.println("""
+                    There is 4 energy sources each of which have their own “construction” you can build to take advantage of their respective energy potential:
+                    Wind = Windmills
+                    Solar = Solar panels
+                    Water = Hydropower plant
+                    Earth = Geothermal power plant""");
             promptEnterKey();
             System.out.println("The more sustainable energy sources you build, the more favorable the energy balance will become...");
             promptEnterKey();
@@ -162,15 +172,9 @@ public class Game {
         }
     }
     public boolean construct(String type){
-        if (this.location.constructEnergy(type)){
-            return true;
-        }else {return false;}
+        return this.location.constructEnergy(type);
     }
     public boolean quit(Command command) {
-        if (command.hasCommandValue()) {
-            return false;
-        } else {
-            return true;
-        }
+        return !command.hasCommandValue();
     }
 }

@@ -6,8 +6,8 @@ import mainDir.Game;
 import mainDir.Wallet;
 
 public class CommandLineClient {
-    private Parser parser;
-    private Game game;
+    private final Parser parser;
+    private final Game game;
 
     public CommandLineClient(){
         this.game = new Game();
@@ -50,7 +50,9 @@ public class CommandLineClient {
                 System.out.println("Quit what?");
             }
         } else if (commandWord == Commands.BUILD) {
-            game.construct(command.getCommandValue());
+            if(game.construct(command.getCommandValue())){
+                System.out.println("You've successfully built a "+command.getCommandValue());
+            }
         } else if (commandWord == Commands.END_TURN){
             game.updateTurn();
         }
@@ -60,13 +62,6 @@ public class CommandLineClient {
     private void printHelp(){
         for (String str : game.getCommandDescription()) {
             System.out.println(str + " ");
-        }
-    }
-    private void sleep(int mili){
-        try {
-            Thread.sleep(mili);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
         }
     }
 }
