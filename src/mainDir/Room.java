@@ -57,6 +57,8 @@ public class Room implements EnergySourceConstructor {
         return builtEnergySource;
     }
 
+    // constructEnergy checks which energySource the player wants to build
+    // and calls the method that constructs that energySource
     public boolean constructEnergy(String type){
         if (type.equalsIgnoreCase("Windmill")){
             return constructWind();
@@ -212,6 +214,3 @@ public class Room implements EnergySourceConstructor {
         return WaterplantCounter;
     }
 }
-
-
-

@@ -36,7 +36,8 @@ public class EnergyBalance {
         System.out.println("Amount of fossile energy: " + fossileEnergy);;
         double greenPercent = (greenEnergy / totalEnergy) * 100;
         double fosilePercent = 100 - greenPercent;
-        System.out.println("The Energy balance (Green/Fossile) is: "+greenPercent+"/"+fosilePercent);
+        System.out.printf("The Energy balance (Green/Fossile) is: %.2f / %.2f\n", greenPercent, fosilePercent);
+
 
     }
 }

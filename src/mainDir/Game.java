@@ -53,15 +53,16 @@ public class Game {
         createdRooms.add(airport);
         roomMap.put("Airport", airport);
 
-
+        // Here we set exits of all rooms except airport to the room airport
         for (Room room : createdRooms) {
-            if (!room.getName().equals("Airport")){
-                room.setExit("Airport", airport);
+            if (!room.getName().equalsIgnoreCase("airport")){
+                room.setExit("AIRPORT", airport);
             }
         }
+        // airport get all other rooms set as exit
         for (Room room : createdRooms) {
             if (!room.getName().equals("Airport")) {
-                airport.setExit(room.getName(), room);
+                airport.setExit(room.getName().toUpperCase(), room);
             }
         }
     }
@@ -72,11 +73,10 @@ public class Game {
             // Can't continue with GO_TO command.
             return false;
         }
-        String destination = command.getCommandValue();
+        String destination = command.getCommandValue().toUpperCase();
         Room destinationRoom = this.location.getExit(destination);
 
         if (destinationRoom == null) {
-            System.out.println("Destination Room is equal to null");
             return false;
         } else {
             this.location = destinationRoom;
@@ -86,6 +86,8 @@ public class Game {
     public CommandWords getCommands(){
         return commands;
     }
+
+    // Return Command with String-input given by Parser.
     public Command getCommand(String word1, String word2) {
         return new CommandImplementation(commands.getCommand(word1), word2);
     }
@@ -116,6 +118,7 @@ public class Game {
         quiz.takeQuiz();
     }
 
+    // Collects PowerOutput for each room in the game. Look at Room.updateOutput()
     public double getTotalPowerOutput(){
         double p = 0;
         for (Room room : createdRooms){
