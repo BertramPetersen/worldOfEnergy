@@ -1,6 +1,7 @@
 package mainDir;
 
 public interface EnergySourceConstructor {
+    String[] types = {"Windmill", "Solar Panel", "Hydro Powerplant", "Geo Powerplant"};
     static EnergySource constructWind() { return new WindMill(); }
     static EnergySource constructHydro() {
         return new HydroPowerplant();

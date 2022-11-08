@@ -115,6 +115,7 @@ public class Game {
         System.out.println();
         EnergyBalance.show();
         System.out.println(" \n \n");
+        promptEnterKey();
         quiz.takeQuiz();
     }
 
@@ -128,7 +129,7 @@ public class Game {
     }
     public void welcome(){
         System.out.println("Welcome to World of Energy\n" +
-                "Press \"Any Key\" to continue...");
+                "Press \"ENTER\" to continue...");
         promptEnterKey();
         System.out.println("Do you want an introduction to World of Energy?\n" +
                 "Y/N");

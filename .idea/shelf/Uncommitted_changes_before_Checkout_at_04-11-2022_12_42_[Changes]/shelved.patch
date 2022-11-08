@@ -1,0 +1,64 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -4,19 +4,7 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="8e11df0e-7c6d-41d2-92e9-8711a404ec7c" name="Changes" comment="oprydning i git">
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/mainDir/EnergySource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/EnergySource.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/mainDir/EnergySourceConstructor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/EnergySourceConstructor.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/mainDir/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/Game.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/mainDir/GeothermalPowerplant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/GeothermalPowerplant.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/mainDir/HydroPowerplant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/HydroPowerplant.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/mainDir/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/Main.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/mainDir/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/Room.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/mainDir/SolarPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/SolarPanel.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/mainDir/WindMill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/WindMill.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/mainDir/textUI/CommandLineClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/textUI/CommandLineClient.java" afterDir="false" />
+-    </list>
++    <list default="true" id="8e11df0e-7c6d-41d2-92e9-8711a404ec7c" name="Changes" comment="Print-bugfixes.&#10;Build command now works." />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -105,7 +93,7 @@
+       <workItem from="1667459768205" duration="1394000" />
+       <workItem from="1667461422249" duration="10785000" />
+       <workItem from="1667474697952" duration="11648000" />
+-      <workItem from="1667555440440" duration="5480000" />
++      <workItem from="1667555440440" duration="5904000" />
+     </task>
+     <task id="LOCAL-00001" summary="test">
+       <created>1665567428682</created>
+@@ -205,7 +193,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1667556073105</updated>
+     </task>
+-    <option name="localTasksCounter" value="15" />
++    <task id="LOCAL-00015" summary="Print-bugfixes.&#10;Build command now works.">
++      <created>1667561999072</created>
++      <option name="number" value="00015" />
++      <option name="presentableId" value="LOCAL-00015" />
++      <option name="project" value="LOCAL" />
++      <updated>1667561999072</updated>
++    </task>
++    <option name="localTasksCounter" value="16" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -263,7 +258,8 @@
+     <MESSAGE value="Changes by mac" />
+     <MESSAGE value="Changes by Kenny" />
+     <MESSAGE value="oprydning i git" />
+-    <option name="LAST_COMMIT_MESSAGE" value="oprydning i git" />
++    <MESSAGE value="Print-bugfixes.&#10;Build command now works." />
++    <option name="LAST_COMMIT_MESSAGE" value="Print-bugfixes.&#10;Build command now works." />
+   </component>
+   <component name="XDebuggerManager">
+     <breakpoint-manager>
