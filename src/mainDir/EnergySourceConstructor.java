@@ -70,4 +70,18 @@ public interface EnergySourceConstructor {
         System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠒⠚⠉⠁⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
         System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠒⠒⠒⠚⠒⠒⠒⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
     }
+    static void printGeoThermal(){
+        System.out.println("                             __  . .* ,");
+        System.out.println("                           ~#@#%(\" .,$ @");
+        System.out.println("                            .\"^ ';\"");
+        System.out.println("                          ..");
+        System.out.println("                         ;. :                                   . .");
+        System.out.println("                         ;==:                     ,,   ,.@#(&*.;'");
+        System.out.println("                         ;. :                   .;#$% & ^^&");
+        System.out.println("                         ;==:                   &  ......");
+        System.out.println("                         ;. :                   ,,;      :");
+        System.out.println("                         ;==:  ._______.       ;  ;      :");
+        System.out.println("                         ;. :  ;    ###:__.    ;  ;      :");
+        System.out.println("   _____________________.'  `._;       :  :__.' .'        `.__________________");
+    }
 }
