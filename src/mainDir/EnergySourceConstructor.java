@@ -34,4 +34,21 @@ public interface EnergySourceConstructor {
 
 
     }
+    static void printWaterPump(){
+        System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+        System.out.println("⠀⠀⠀⠀⠀⠀⠀⣰⠋⠉⠉⢷⠒⠒⠶⣄⡀⠀⠀⠀⠀⠀");
+        System.out.println("⠀⠀⠀⠀⠀⠀⠀⠹⣄⣀⣠⡾⠴⠤⣄⠀⠻⡄⠀⠀⠀⠀");
+        System.out.println("⠀⠀⠀⠀⠀⠀⣤⠶⠷⠿⠿⠷⢦⠀⠘⡆⠀⣿⠀⠀⠀⠀");
+        System.out.println("⠀⠀⢀⣀⣀⣀⣙⣟⠛⠛⠛⢻⠋⠀⣠⡇⠀⣿⠀⠀⠀⠀");
+        System.out.println("⠀⡼⠋⠉⠉⠉⠉⣿⠀⠀⠀⢸⣖⡋⠁⡇⠀⣿⠀⠀⠀⠀");
+        System.out.println("⠘⣇⣠⡞⠛⠛⠛⣷⠀⠀⠀⢸⠈⠙⠺⣇⠀⢻⣄⣀⣀⡀");
+        System.out.println("⠀⣰⣅⠀⠀⠀⠀⣿⠀⠀⠀⢸⠀⠀⠀⠙⢦⣀⡀⠀⢀⣽");
+        System.out.println("⣼⠁⠘⣆⠀⠀⠀⣿⠀⠀⠀⢸⠀⠀⠀⠀⠀⠈⠉⠉⠉⠀");
+        System.out.println("⢿⣀⣠⡟⠀⠀⠀⣿⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+        System.out.println("⠀⠈⠁⠀⠀⠀⠀⣿⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+        System.out.println("⠀⠀⠀⠀⠀⠀⣀⣿⣀⣀⣀⣸⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀");
+        System.out.println("⠀⠀⠀⠀⢀⣸⣭⣭⣭⣭⣭⣭⣭⣽⡀⠀⠀⠀⠀⠀⠀⠀");
+        System.out.println("⠀⠀⠀⠀⢸⣁⣀⣀⣀⣀⣀⣀⣀⣀⣹⠀⠀⠀⠀⠀⠀⠀");
+        System.out.println("⠀⠀⠀⠀⠈⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠀⠀⠀⠀⠀⠀⠀");
+    }
 }

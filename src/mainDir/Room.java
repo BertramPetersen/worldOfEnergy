@@ -95,6 +95,7 @@ public class Room implements EnergySourceConstructor {
         if (ValidateFunds(source)) {
             builtEnergySource.add(source);
             updateOutput();
+            EnergySourceConstructor.printWaterPump();
             return true;
         } else {
             System.out.println("Insufficient funds for purchase of Hydro Powerplant");

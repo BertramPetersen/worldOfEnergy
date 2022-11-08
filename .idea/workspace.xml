@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e11df0e-7c6d-41d2-92e9-8711a404ec7c" name="Changes" comment="String[] types er blevet tilføjet igen til EnergySourceConstructor&#10;Der er små quality of life improvements">
-      <change afterPath="$PROJECT_DIR$/src/mainDir/util/Colors.java" afterDir="false" />
+    <list default="true" id="8e11df0e-7c6d-41d2-92e9-8711a404ec7c" name="Changes" comment="Minor bugfixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainDir/EnergyBalance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/EnergyBalance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainDir/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainDir/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainDir/Quiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/Quiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainDir/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainDir/EnergySourceConstructor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/EnergySourceConstructor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +33,13 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="SWAP_SIDES_IN_COMPARE_BRANCHES" value="true" />
+  </component>
+  <component name="GithubProjectSettings">
+    <option name="branchProtectionPatterns">
+      <list>
+        <option value="master" />
+      </list>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -102,7 +104,8 @@
       <workItem from="1667461422249" duration="10785000" />
       <workItem from="1667474697952" duration="11648000" />
       <workItem from="1667555440440" duration="5480000" />
-      <workItem from="1667913728390" duration="7501000" />
+      <workItem from="1667913728390" duration="8129000" />
+      <workItem from="1667931347868" duration="1066000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1665567428682</created>
@@ -223,7 +226,28 @@
       <option name="project" value="LOCAL" />
       <updated>1667915780948</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Room.getLongDescription have been overhauled so that the description is printet prettier than before.">
+      <created>1667930316168</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1667930316168</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Colors.java has been added so that the colors of printed text can be changed.&#10;EnergyBalance.java has been overhauled so that the EnergyBalance is now presented as a progressbar&#10;Minor Changes to Game.welcome()">
+      <created>1667930479170</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1667930479170</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Minor bugfixes">
+      <created>1667930500410</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1667930500410</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,7 +308,11 @@
     <MESSAGE value="Kommentarer til gennemgang af det man skal forberede. &#10;Man behøver ikke bruge stort bogstav når man bruger go to kommandoen" />
     <MESSAGE value="Oprydning. String[] types er blevet fjernet fra EnergySourceConstructor" />
     <MESSAGE value="String[] types er blevet tilføjet igen til EnergySourceConstructor&#10;Der er små quality of life improvements" />
-    <option name="LAST_COMMIT_MESSAGE" value="String[] types er blevet tilføjet igen til EnergySourceConstructor&#10;Der er små quality of life improvements" />
+    <MESSAGE value="Room.getLongDescription have been overhauled so that the description is printet prettier than before." />
+    <MESSAGE value="Colors.java has been added so that the colors of printed text can be changed.&#10;EnergyBalance.java has been overhauled so that the EnergyBalance is now presented as a progressbar&#10;Minor Changes to Game.welcome" />
+    <MESSAGE value="Colors.java has been added so that the colors of printed text can be changed.&#10;EnergyBalance.java has been overhauled so that the EnergyBalance is now presented as a progressbar&#10;Minor Changes to Game.welcome()" />
+    <MESSAGE value="Minor bugfixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor bugfixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
