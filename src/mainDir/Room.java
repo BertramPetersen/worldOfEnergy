@@ -159,18 +159,12 @@ public class Room implements EnergySourceConstructor {
 
 
     public void getLongDescription() {
-        System.out.println("Welcome to " + this.name);
-        System.out.println("This room has potentiel for: ");
-        System.out.println("wind potential: " + this.windPot);
-        System.out.println("geo potential: " + this.geoPot);
-        System.out.println("solar potential: " + this.sunPot);
-        System.out.println("water potential: " + this.waterPot);
-        System.out.println("This room currently have:");
-        System.out.println("This country has the following energy sources:");
-        System.out.println("Windmills: "+ getWindmillCount());
-        System.out.println("Geoplants: "+getGeoplantCount());
-        System.out.println("Solarpanels: "+getSolarPanelCount());
-        System.out.println("Waterplants: "+getWaterplantCount());
+        System.out.printf("Welcome to %s\n",this.name);
+        System.out.printf("%-44s %s\n","This room has potentiel for: ", " This room currently have:");
+        System.out.printf("%-40s %-4s %s %d \n", "Potential for wind energy: "+ this.windPot, "|", "Windmills: ",getWindmillCount());
+        System.out.printf("%-40s %-4s %s %d \n","Potential for Geothermal energy: "+ this.geoPot, "|", "Geothermal powerplants: ",getGeoplantCount());
+        System.out.printf("%-40s %-4s %s %d \n","Potential for Solar energy: " +this.sunPot, "|", "Solar Panels: ",getSolarPanelCount());
+        System.out.printf("%-40s %-4s %s %d \n", "Potential for Hydropowered energy: "+ this.waterPot, "|", "Hydro powerplants: ",getWaterplantCount());
     }
 
     public int getWindmillCount() {
