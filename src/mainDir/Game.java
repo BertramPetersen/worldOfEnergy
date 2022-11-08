@@ -1,5 +1,7 @@
 package mainDir;
 
+import mainDir.util.Colors;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -114,7 +116,6 @@ public class Game {
         EnergyBalance.UpdateGreenEnergy(getTotalPowerOutput());
         System.out.println();
         EnergyBalance.show();
-        System.out.println(" \n \n");
         promptEnterKey();
         quiz.takeQuiz();
     }
@@ -145,7 +146,7 @@ public class Game {
             System.out.printf("%-32s %s\n", "Wind = Windmill", "Solar = Solar Panel");
             System.out.printf("%-32s %s\n", "Water = Hydro Powerplant", "Geothermal = Geo Powerplant");
             promptEnterKey();
-            System.out.println("The more sustainable energy sources you build, the more favorable the energy balance will become...");
+            System.out.print("The more sustainable energy sources you build, the more favorable the energy balance will become...");
             System.out.println();
             System.out.println("But what is this so called energy balance?");
             promptEnterKey();
@@ -164,7 +165,9 @@ public class Game {
             System.out.println();
             System.out.println("You can energy source to passively earn you money. You can also earn additional money by correctly answering the quiz questions, which will appear after you have finished your turn.");
             promptEnterKey();
-            System.out.println("You can now begin to populate World of Energy with renewable energy sources to tilt the energy balance in your favor");
+            System.out.println();
+            System.out.println(Colors.GREEN + "You can now begin to populate World of Energy with renewable energy sources" +
+                    " to tilt the energy balance in your favor"+Colors.RESET);
             getRoomDescription();
         }
     }
@@ -180,4 +183,5 @@ public class Game {
     public boolean quit(Command command) {
         return !command.hasCommandValue();
     }
+    public ArrayList<Room> getCreatedRooms(){return createdRooms;}
 }
