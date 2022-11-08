@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e11df0e-7c6d-41d2-92e9-8711a404ec7c" name="Changes" comment="oprydning i git">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainDir/EnergyBalance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/EnergyBalance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainDir/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainDir/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/Room.java" afterDir="false" />
-    </list>
+    <list default="true" id="8e11df0e-7c6d-41d2-92e9-8711a404ec7c" name="Changes" comment="Kommentarer til gennemgang af det man skal forberede. &#10;Man behøver ikke bruge stort bogstav når man bruger go to kommandoen" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -198,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667556073105</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Kommentarer til gennemgang af det man skal forberede. &#10;Man behøver ikke bruge stort bogstav når man bruger go to kommandoen">
+      <created>1667845790960</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1667845790960</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,7 +258,8 @@
     <MESSAGE value="Changes by mac" />
     <MESSAGE value="Changes by Kenny" />
     <MESSAGE value="oprydning i git" />
-    <option name="LAST_COMMIT_MESSAGE" value="oprydning i git" />
+    <MESSAGE value="Kommentarer til gennemgang af det man skal forberede. &#10;Man behøver ikke bruge stort bogstav når man bruger go to kommandoen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Kommentarer til gennemgang af det man skal forberede. &#10;Man behøver ikke bruge stort bogstav når man bruger go to kommandoen" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
