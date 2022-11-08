@@ -163,6 +163,8 @@ public class Quiz {
     // Lets you play the quiz
     public void takeQuiz() {
         Collections.shuffle(questions);
+        System.out.println("You now have the opportunity to earn money to build more energy sources by taking the following quiz:");
+        System.out.println();
         try {
             Scanner keyboardInput = new Scanner(System.in);
             System.out.println(questions.get(i).prompt);
