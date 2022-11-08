@@ -110,6 +110,7 @@ public class Room implements EnergySourceConstructor {
         if (ValidateFunds(source)) {
             builtEnergySource.add(source);
             updateOutput();
+            EnergySourceConstructor.printSolarPanel();
             return true;
         } else {
             System.out.println("Insufficient funds for purchase of Solar Panel");

@@ -51,4 +51,23 @@ public interface EnergySourceConstructor {
         System.out.println("⠀⠀⠀⠀⢸⣁⣀⣀⣀⣀⣀⣀⣀⣀⣹⠀⠀⠀⠀⠀⠀⠀");
         System.out.println("⠀⠀⠀⠀⠈⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠀⠀⠀⠀⠀⠀⠀");
     }
+    static void printSolarPanel(){
+        System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⡀⠀⠀⠀⠀⢠⠄⠀⠀⠀⠀⠀⠀");
+        System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣄⣀⣀⣠⠏⠀⠀⠀⠀⠀⠀⠀");
+        System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡴⠋⠀⠀⠙⢦⠀⠀⠀⠀⠀⠀⠀");
+        System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⠒⠒⠚⡇⠀⠀⠀⠀⢸⠓⠒⠒⠂⠀⠀⠀");
+        System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣦⣄⣠⢴⠋⠀⠀⠀⠀⠀⠀⠀");
+        System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡞⠁⠀⠀⠈⢣⡀⠀⠀⠀⠀⠀⠀");
+        System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⣀⣈⡥⠤⢄⡀⠀⠀⠃⠀⠀⠀⠀⠀⠀");
+        System.out.println("⢀⣀⣀⣀⣀⣤⠤⠤⠤⠶⠒⠒⠒⠚⠻⣍⠉⠉⠉⠁⠀⠀⠀⠀⠀⠀⢙⣄⠀⠀⠀⠀⠀⠀⠀⠀");
+        System.out.println("⠈⠳⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢈⣷⣄⣤⠤⠴⠶⠒⠚⠋⠉⠉⠁⠱⣄⠀⠀⠀⠀⠀⠀");
+        System.out.println("⠀⠀⠙⢦⣀⣀⣤⠤⠤⠶⠒⠒⠚⠉⠉⠉⠀⠈⠳⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠳⣄⠀⠀⠀⠀");
+        System.out.println("⠀⠀⠀⠀⠙⢦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠳⣄⠀⠀⠀⢀⣀⣠⠤⠖⠒⠋⠳⣄⠀⠀");
+        System.out.println("⠀⠀⠀⠀⠀⠀⠙⢦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣠⠬⠷⣞⠋⠉⠀⠀⠀⠀⠀⠀⠀⠈⣳⣄");
+        System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⠳⣄⠀⠀⣀⣀⡤⠴⠒⠋⠉⠁⠀⠀⠀⠈⠳⣄⠀⠀⢀⣀⡤⠔⠚⠉⠉⠀");
+        System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣍⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⡤⠼⠓⠋⠉⠀⠀⠀⠀⠀⠀⠀");
+        System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠳⣄⠀⠀⠀⣀⣤⠴⠒⢻⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+        System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠒⠚⠉⠁⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+        System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠒⠒⠒⠚⠒⠒⠒⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+    }
 }
