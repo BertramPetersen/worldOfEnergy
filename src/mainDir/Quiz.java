@@ -9,9 +9,10 @@ public class Quiz {
 
     public Quiz(){
         createQuestions();
+        Collections.shuffle(questions);
     }
     // Create the list of questions and their respective answers
-    public ArrayList<Question> questions = new ArrayList<Question>();
+    public ArrayList<Question> questions = new ArrayList<>();
     public void createQuestions () {
         questions.add(new Question("""
                 Which of these is not a type of renewable energy?
@@ -162,7 +163,6 @@ public class Quiz {
 
     // Lets you play the quiz
     public void takeQuiz() {
-        Collections.shuffle(questions);
         System.out.println("You now have the opportunity to earn money to build more energy sources by taking the following quiz:");
         System.out.println();
         try {
