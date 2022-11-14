@@ -11,6 +11,7 @@ public class Room implements EnergySourceConstructor {
     private HashMap<String, Room> exits = new HashMap<>();
 
     double realPowerOutput;
+    int accumulativePassiveIncome;
 
     public Room(String name, int windPot, int sunPot, int waterPot, int geoPot) {
         this.windPot = windPot;
@@ -130,7 +131,7 @@ public class Room implements EnergySourceConstructor {
 
     @Override
     public boolean ValidateFunds(EnergySource e) {
-        if (Wallet.getCoins() > e.getPrice()) {
+        if (Wallet.getCoins() >= e.getPrice()) {
             Wallet.subtractCoins(e.getPrice());
             return true;
         } else {
@@ -152,6 +153,21 @@ public class Room implements EnergySourceConstructor {
             }
         }
     }
+    public void PassiveIncome() { // Generates a passive income from the energy sources built by the player
+        this.accumulativePassiveIncome = 0;
+        for (EnergySource source : builtEnergySource)
+            if (source instanceof WindMill) {
+                this.accumulativePassiveIncome += source.passiveIncome;
+            } else if (source instanceof HydroPowerplant) {
+                this.accumulativePassiveIncome += source.passiveIncome;
+            } else if (source instanceof SolarPanel) {
+                this.accumulativePassiveIncome += source.passiveIncome;
+            } else if (source instanceof GeothermalPowerplant) {
+                this.accumulativePassiveIncome += source.passiveIncome;
+
+        }
+        Wallet.addCoins(accumulativePassiveIncome);
+    }
 
     public double getRealPowerOutput() {
         return this.realPowerOutput;
@@ -160,7 +176,7 @@ public class Room implements EnergySourceConstructor {
 
     public void getLongDescription() {
         System.out.printf("Welcome to %s\n",this.name);
-        System.out.printf("%-44s %s\n","This room has potentiel for: ", " This room currently have:");
+        System.out.printf("%-44s %s\n","This room has potential for: ", " This room currently have:");
         System.out.printf("%-40s %-4s %s %d \n", "Potential for wind energy: "+ this.windPot, "|", "Windmills: ",getWindmillCount());
         System.out.printf("%-40s %-4s %s %d \n","Potential for Geothermal energy: "+ this.geoPot, "|", "Geothermal powerplants: ",getGeoplantCount());
         System.out.printf("%-40s %-4s %s %d \n","Potential for Solar energy: " +this.sunPot, "|", "Solar Panels: ",getSolarPanelCount());
@@ -207,4 +223,5 @@ public class Room implements EnergySourceConstructor {
         }
         return WaterplantCounter;
     }
+
 }
