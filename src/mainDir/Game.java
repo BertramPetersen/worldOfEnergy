@@ -15,6 +15,8 @@ public class Game {
 
     Quiz quiz;
 
+    RandomEvent randomEvent;
+
     public Game() {
         this.turnCounter = 0;
         createdRooms = new ArrayList<>();
@@ -23,6 +25,7 @@ public class Game {
         Wallet.setCoins(500);
         createRooms();
         this.location = roomMap.get("Airport");
+        this.randomEvent = new RandomEvent();
     }
 
     private void createRooms() {
@@ -118,8 +121,8 @@ public class Game {
         EnergyBalance.show();
         promptEnterKey();
         quiz.takeQuiz();
+        randomEvent.initiateRandomEvent();
     }
-
     // Collects PowerOutput for each room in the game. Look at Room.updateOutput()
     public double getTotalPowerOutput(){
         double p = 0;
