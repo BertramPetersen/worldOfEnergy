@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e11df0e-7c6d-41d2-92e9-8711a404ec7c" name="Changes" comment="ASCII ART for Solar Panel has been added">
+    <list default="true" id="8e11df0e-7c6d-41d2-92e9-8711a404ec7c" name="Changes" comment="prøver at fikse projektet">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14-11-2022_12_40__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainDir/EnergySourceConstructor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/EnergySourceConstructor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainDir/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/Room.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,6 +107,8 @@
       <workItem from="1667913728390" duration="8129000" />
       <workItem from="1667931347868" duration="2812000" />
       <workItem from="1667939044345" duration="813000" />
+      <workItem from="1668427297046" duration="267000" />
+      <workItem from="1668427570003" duration="110000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1665567428682</created>
@@ -263,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667938571597</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="prøver at fikse projektet">
+      <created>1668427386202</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1668427386202</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,7 +312,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Hurtig ligegyldig opdatering" />
     <MESSAGE value="Room and EnergySourceConstructor has been built and Game, is partially build" />
     <MESSAGE value="createRooms method has been added to game. Rooms now have exits which are implemented the same way as in WorldOfZuul" />
     <MESSAGE value="Wallet er blevet gjort static og der er lavet rettelser" />
@@ -329,7 +336,8 @@
     <MESSAGE value="Minor bugfixes" />
     <MESSAGE value="ASCII art til Hydro Powerplant tilføjet" />
     <MESSAGE value="ASCII ART for Solar Panel has been added" />
-    <option name="LAST_COMMIT_MESSAGE" value="ASCII ART for Solar Panel has been added" />
+    <MESSAGE value="prøver at fikse projektet" />
+    <option name="LAST_COMMIT_MESSAGE" value="prøver at fikse projektet" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
