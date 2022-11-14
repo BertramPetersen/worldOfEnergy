@@ -6,15 +6,17 @@ import java.util.Scanner;
 
 public class RandomEvent {
     private int i;
+
     public ArrayList<Events> events = new ArrayList<>();
 
     public RandomEvent() {
         createEvents();
+        Collections.shuffle(events);
     }
 
     public void createEvents() {
-        events.add(new Events("!ALERT! The brazilian government just announced an almost complete deforestation of the Amazon Rainforest. " +
-                "Now all the forest’s carbon storage capacity will be lost to the atmosphere !ALERT!", 1.5));
+        events.add(new Events("The brazilian government just announced an almost complete deforestation of the Amazon Rainforest. " +
+                "Now all the forest’s carbon storage capacity will be lost to the atmosphere", 1.5));
     }
 
     private void promptEnterKey() {
@@ -23,31 +25,29 @@ public class RandomEvent {
     }
 
     public void initiateRandomEvent() {
-        double x = Math.random(); // Generates random double between 0-1
-        if (x > 0.8) {
+        try {
+            System.out.println("Wait...");
+            promptEnterKey();
+            System.out.println("Something is off...");
+            promptEnterKey();
+            System.out.println("Something happened as the new year commenced...");
+            promptEnterKey();
+            System.out.println("!ALERT! " + events.get(i).description + " !ALERT!");
+            promptEnterKey();
+            System.out.println("This will undoubtedly have consequences on the climate forecast and energy balance...");
+            promptEnterKey();
+            System.out.println("!ALERT!             !ALERT!             !ALERT!             !ALERT!             !ALERT!");
+            Forecast.increase(events.get(i).impact);
+            System.out.println("!ALERT!             !ALERT!             !ALERT!             !ALERT!             !ALERT!");
+            System.out.println("Oh no! These news have terrible consequences for our forecast. It has increased with " + (int) ((events.get(i).impact * 100) - 100) + "%!");
+            System.out.println();
+            promptEnterKey();
+        } catch (IndexOutOfBoundsException e) {
+            i = 0;
             Collections.shuffle(events);
-            try {
-                System.out.println("Wait...");
-                promptEnterKey();
-                System.out.println("Something is off...");
-                promptEnterKey();
-                System.out.println("Something happened as the new turn commenced...");
-                promptEnterKey();
-                System.out.println(events.get(i).description);
-                promptEnterKey();
-                System.out.println("This will undoubtedly have consequences on the climate forecast and energy balance...");
-                promptEnterKey();
-                EnergyBalance.show();
-                Forecast.increase(events.get(i).impact);
-                promptEnterKey();
-                System.out.println("Oh no! The forecast has increased with " + (int) ((events.get(i).impact * 100) - 100) + "%!");
-            } catch (IndexOutOfBoundsException e) {
-                i = 0;
-                Collections.shuffle(events);
-                initiateRandomEvent();
-            }
-            i++;
+            initiateRandomEvent();
         }
+        i++;
     }
 }
 
