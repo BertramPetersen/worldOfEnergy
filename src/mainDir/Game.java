@@ -228,7 +228,7 @@ public class Game {
             System.exit(0);
 
 
-        } else if (this.turnCounter == 1 && (EnergyBalance.getGreenEnergy()/ EnergyBalance.getTotalEnergy())*100 <= 50){
+        } else if (this.turnCounter == 20 && (EnergyBalance.getGreenEnergy()/ EnergyBalance.getTotalEnergy())*100 <= 50){
             System.out.println();
             System.out.println("you have sadly lost the game");
             System.out.println("Thanks for playing the game <3");
