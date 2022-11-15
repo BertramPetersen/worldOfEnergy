@@ -54,9 +54,10 @@ public class Forecast extends EnergyBalance {
             System.out.println("---------------------------------------------------------------------------------------");
 
         } else {
-            seaLevel *= decrease;
-            temperature *= decrease;
-            CO2 *= decrease;
+            double decrease = ((EnergyBalance.getGreenEnergy()/EnergyBalance.getTotalEnergy())*100);// unit %
+            seaLevel *= (decrease/100);
+            temperature *= (decrease/100);
+            CO2 *= (decrease/100);
             System.out.println();
             System.out.println("Good job! The year is now " + currentYear + " and the world's C02 output is finally falling");
             System.out.println("---------------------------------------------------------------------------------------");
