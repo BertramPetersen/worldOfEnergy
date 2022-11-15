@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
 
-public class Game {
+public class Game implements dataService {
     int turnCounter;
     private Room location;
     ArrayList<Room> createdRooms;
@@ -96,6 +96,7 @@ public class Game {
     }
 
     // Return Command with String-input given by Parser.
+    @Override
     public Command getCommand(String word1, String word2) {
         return new CommandImplementation(commands.getCommand(word1), word2);
     }
@@ -121,13 +122,36 @@ public class Game {
 
     public void updateTurn() {
         turnCounter++;
-        Forecast.update();
         EnergyBalance.UpdateGreenEnergy(getTotalPowerOutput());
+        Forecast.update();
         System.out.println();
+        updatePassiveIncome();
         EnergyBalance.show();
         promptEnterKey();
-        quiz.takeQuiz();
-        randomEvent.initiateRandomEvent();
+        playQuizOrRandomEvent();
+    }
+
+    public void updatePassiveIncome() {
+        for (Room room : createdRooms){
+            room.PassiveIncome();
+        }
+    }
+    public void playQuizOrRandomEvent1() { // 1. version of play quiz or random event
+        double x = Math.random();
+        if (turnCounter % 2 == 0) { // takeQuiz is run every other turn
+            quiz.takeQuiz();
+        }
+        else if (x >= 0.7) { // There is a 30% chance of a random event when quiz is not being run
+            randomEvent.initiateRandomEvent();
+        }
+    }
+    public void playQuizOrRandomEvent() { // 2. version of play quiz or random event
+        double x = Math.random();
+        if (x >= 0.8 && turnCounter >= 3) { // RandomEvent has a 20% chance of being run after the 3rd round
+            randomEvent.initiateRandomEvent();
+        } else if (x <= 0.7 || turnCounter < 3) { // takeQuiz has a 70% chance of being run. But is always run in the 2 first rounds
+            quiz.takeQuiz();   // This implies to things: 1. Quiz and Random Event cannot happen in the same round. 2. There is a 10% chance neither is run.
+        }
     }
 
     // Collects PowerOutput for each room in the game. Look at Room.updateOutput()
@@ -146,7 +170,8 @@ public class Game {
         System.out.println("Do you want an introduction to World of Energy?\n" +
                 "Y/N");
         Scanner scanner = new Scanner(System.in);
-        if (!scanner.hasNext("N")) {
+        
+        if (!scanner.next().equalsIgnoreCase("n")){
             System.out.println("A turn-based game where you have to save the world from global warming...");
             promptEnterKey();
             System.out.println("Your job is to build sustainable energy sources in different countries around the world, to prevent global warming from escalating...");
@@ -164,7 +189,7 @@ public class Game {
             System.out.println("Throughout the game you'll see an energy balance. If the cumulative amount of fossil energy is greater than the cumulative amount of green energy,\n" +
                     "then the sea level, temperature and CO2 levels will rise...");
             promptEnterKey();
-            System.out.println("But...");
+            System.out.println("But!");
             promptEnterKey();
             System.out.println("If the cumulative amount of green energy is greater than the cumulative amount of fossil energy, then the sea level, temperature and CO2 levels will decrease...");
             System.out.println();
@@ -174,9 +199,22 @@ public class Game {
             promptEnterKey();
             System.out.println("There are different ways to earn money...");
             System.out.println();
-            System.out.println("You can energy source to passively earn you money. You can also earn additional money by correctly answering the quiz questions, which will appear after you have finished your turn.");
+            System.out.println("You can build energy source to passively earn you money:");
+            System.out.printf("%-32s %s\n", "Windmill = 40 coins", "Solar Panel = 20 coins");
+            System.out.printf("%-32s %s\n", "Hydro Powerplant = 140 coins", "Geo Powerplant = 390 coins");
+            promptEnterKey();
+            System.out.println("You can also earn additional money by correctly answering the quiz questions, which will appear after you have finished your turn.");
+            promptEnterKey();
+            System.out.println(Colors.GREEN + "Now that you know the premise of the game, you can begin to populate World of Energy with renewable energy sources to tilt the energy balance in your favor.");
+            promptEnterKey();
+            System.out.println("Hello... The year is " + Forecast.currentYear + ". The C02 emission is currently " + Forecast.CO2 + " billion ton a year...");
+            System.out.println("The average temperature has already increased with " + Forecast.temperature + "\u2103, and the world's sea level has risen with " + Forecast.seaLevel + "cm...");
+            promptEnterKey();
+            System.out.println("Hurry! Tilt the energy balance towards green energy to stop the them from increasing further...\n" +
+                    "Good luck!" + Colors.RESET);
             promptEnterKey();
             System.out.println();
+
             System.out.println(Colors.GREEN + "You can now begin to populate World of Energy with renewable energy sources" +
                     " to tilt the energy balance in your favor" + Colors.RESET);
             getRoomDescription();
@@ -184,6 +222,7 @@ public class Game {
     }
 
     public void promptEnterKey() {
+
         Scanner scanner = new Scanner(System.in);
         scanner.nextLine();
     }

@@ -4,37 +4,23 @@ import mainDir.util.Colors;
 
 public class EnergyBalance {
     private static double greenEnergy;
-    private final static int totalEnergy = 5000;
+    private final static int totalEnergy = 1125;
     private static int fossileEnergy = (int) (totalEnergy - greenEnergy);
     public static void UpdateGreenEnergy(double greenEnergy) {
 
         EnergyBalance.greenEnergy = greenEnergy;
         fossileEnergy = (int)(totalEnergy - greenEnergy);
     }
-
     public static double getGreenEnergy(){
         return greenEnergy;
     }
     public static int getTotalEnergy(){
         return totalEnergy;
     }
-
-    public double DisplayGreenEnergy() {
-        return greenEnergy;
-    }
-
-    public double DisplayFossileEnergy() {
-        return fossileEnergy;
-    }
-
-    public double DisplayTotalEnergy() {
-        return totalEnergy;
-    }
-
     public static void show(){
         double greenPercent = (greenEnergy / totalEnergy) * 100;
-        double fosilePercent = 100 - greenPercent;
-        System.out.printf("The Energy balance (Green/Fossile) is: %.2f / %.2f\n", greenPercent, fosilePercent);
+        double fossilPercent = 100 - greenPercent;
+        System.out.printf("The Energy balance (Green/Fossil) is: %.2f / %.2f\n", greenPercent, fossilPercent);
         System.out.print("["+ Colors.GREEN);
         for (int i = 0; i <= (int) greenPercent; i++) {
             System.out.print("|");

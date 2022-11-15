@@ -21,7 +21,7 @@ public class CommandLineClient {
             Command command = parser.getCommand();
             finished = processCommand(command);
         }
-        System.out.println("Thank you for playing. Good Bye.");
+        System.out.println("Thank you for playing. Goodbye.");
     }
 
     private boolean processCommand(Command command) {
@@ -52,6 +52,7 @@ public class CommandLineClient {
                 System.out.println("Quit what?");
             }
         } else if (commandWord == Commands.BUILD) {
+
             if (game.construct(command.getCommandValue())) {
                 System.out.println("You've successfully built a " + command.getCommandValue());
             }

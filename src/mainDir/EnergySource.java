@@ -4,6 +4,7 @@ public abstract class EnergySource {
     int price;
     double output;
     String name;
+    int passiveIncome; // Passive income from built energy sources
 
 
     public int getPrice(){

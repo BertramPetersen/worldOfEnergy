@@ -169,7 +169,6 @@ public class Quiz {
             Scanner keyboardInput = new Scanner(System.in);
             System.out.println(questions.get(i).prompt);
             String answer = keyboardInput.nextLine().toLowerCase();
-
             if (!(answer.equals("a") || answer.equals("b") || answer.equals("c") || answer.equals("d"))) {
                 System.out.println("Oh no, it looks like your input wasn't one of the answer possibilities!");
                 System.out.println("Please type of one the four answer possibilities: a, b, c, or d");
@@ -193,3 +192,4 @@ public class Quiz {
         }
     }
 }
+

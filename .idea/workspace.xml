@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+
     <list default="true" id="8e11df0e-7c6d-41d2-92e9-8711a404ec7c" name="Changes" comment="Help extension er lavet i game med en metode &quot;gePrices&quot;, som bliver kaldt i CommandLineClient">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -19,8 +20,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -117,7 +118,11 @@
       <workItem from="1667474697952" duration="11648000" />
       <workItem from="1667555440440" duration="5480000" />
       <workItem from="1667913728390" duration="8129000" />
-      <workItem from="1667931347868" duration="1066000" />
+      <workItem from="1667931347868" duration="2812000" />
+      <workItem from="1667939044345" duration="813000" />
+      <workItem from="1668427297046" duration="267000" />
+      <workItem from="1668427570003" duration="2121000" />
+      <workItem from="1668504037380" duration="1859000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1665567428682</created>
@@ -259,6 +264,7 @@
       <option name="project" value="LOCAL" />
       <updated>1667930500410</updated>
     </task>
+
     <task id="LOCAL-00021" summary="tilføjet hello world">
       <created>1668431766367</created>
       <option name="number" value="00021" />
@@ -317,6 +323,7 @@
     <MESSAGE value="Hurtig ligegyldig opdatering" />
     <MESSAGE value="Room and EnergySourceConstructor has been built and Game, is partially build" />
     <MESSAGE value="createRooms method has been added to game. Rooms now have exits which are implemented the same way as in WorldOfZuul" />
+
     <MESSAGE value="Wallet er blevet gjort static og der er lavet rettelser" />
     <MESSAGE value="Changes by marcu" />
     <MESSAGE value="flere ændringer" />
@@ -337,9 +344,11 @@
     <MESSAGE value="Colors.java has been added so that the colors of printed text can be changed.&#10;EnergyBalance.java has been overhauled so that the EnergyBalance is now presented as a progressbar&#10;Minor Changes to Game.welcome" />
     <MESSAGE value="Colors.java has been added so that the colors of printed text can be changed.&#10;EnergyBalance.java has been overhauled so that the EnergyBalance is now presented as a progressbar&#10;Minor Changes to Game.welcome()" />
     <MESSAGE value="Minor bugfixes" />
+
     <MESSAGE value="tilføjet hello world" />
     <MESSAGE value="Help extension er lavet i game med en metode &quot;gePrices&quot;, som bliver kaldt i CommandLineClient" />
     <option name="LAST_COMMIT_MESSAGE" value="Help extension er lavet i game med en metode &quot;gePrices&quot;, som bliver kaldt i CommandLineClient" />
+
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
