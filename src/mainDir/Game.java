@@ -115,8 +115,8 @@ public class Game {
     }
     public void updateTurn(){
         turnCounter++;
-        Forecast.update();
         EnergyBalance.UpdateGreenEnergy(getTotalPowerOutput());
+        Forecast.update();
         System.out.println();
         updatePassiveIncome();
         EnergyBalance.show();
@@ -195,14 +195,18 @@ public class Game {
             promptEnterKey();
             System.out.println("You can also earn additional money by correctly answering the quiz questions, which will appear after you have finished your turn.");
             promptEnterKey();
-            System.out.println(Colors.GREEN + "Now that you know the premise of the game, you can begin to populate World of Energy with renewable energy sources to tilt the energy balance in your favor. \n" +
-                    "Good luck!"+Colors.RESET);
+            System.out.println(Colors.GREEN + "Now that you know the premise of the game, you can begin to populate World of Energy with renewable energy sources to tilt the energy balance in your favor.");
+            promptEnterKey();
+            System.out.println("Hello... The year is " + Forecast.currentYear + ". The C02 emission is currently " + Forecast.CO2 + " billion ton a year...");
+            System.out.println("The average temperature has already increased with " + Forecast.temperature + "\u2103, and the world's sea level has risen with " + Forecast.seaLevel + "cm...");
+            promptEnterKey();
+            System.out.println("Hurry! Tilt the energy balance towards green energy to stop the them from increasing further...\n" +
+                    "Good luck!" + Colors.RESET);
             promptEnterKey();
             System.out.println();
             getRoomDescription();
         }
     }
-
     public void promptEnterKey(){
         Scanner scanner = new Scanner(System.in);
         scanner.nextLine();
