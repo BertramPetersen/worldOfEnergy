@@ -1,0 +1,235 @@
+Index: src/mainDir/EnergyBalance.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package mainDir;\r\n\r\npublic class EnergyBalance {\r\n    private static double greenEnergy;\r\n    private final static int totalEnergy = 5000;\r\n    private static int fossileEnergy = (int) (totalEnergy - greenEnergy);\r\n\r\n\r\n    public static void UpdateGreenEnergy(double greenEnergy) {\r\n\r\n        EnergyBalance.greenEnergy = greenEnergy;\r\n        fossileEnergy = (int)(totalEnergy - greenEnergy);\r\n    }\r\n\r\n    public static double getGreenEnergy(){\r\n        return greenEnergy;\r\n    }\r\n    public static int getTotalEnergy(){\r\n        return totalEnergy;\r\n    }\r\n\r\n    public double DisplayGreenEnergy() {\r\n        return greenEnergy;\r\n    }\r\n\r\n    public double DisplayFossileEnergy() {\r\n        return fossileEnergy;\r\n    }\r\n\r\n    public double DisplayTotalEnergy() {\r\n        return totalEnergy;\r\n    }\r\n\r\n    public static void show(){\r\n        System.out.println(\"Amount of green energy: \" + greenEnergy);\r\n        System.out.println(\"Amount of fossile energy: \" + fossileEnergy);;\r\n        double greenPercent = (greenEnergy / totalEnergy) * 100;\r\n        double fosilePercent = 100 - greenPercent;\r\n        System.out.println(\"The Energy balance (Green/Fossile) is: \"+greenPercent+\"/\"+fosilePercent);\r\n\r\n    }\r\n}\r\n\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/mainDir/EnergyBalance.java b/src/mainDir/EnergyBalance.java
+--- a/src/mainDir/EnergyBalance.java	(revision e49bdfe50f73c62d4eaca5f6fb4756a309ab20a2)
++++ b/src/mainDir/EnergyBalance.java	(date 1667836401234)
+@@ -2,7 +2,7 @@
+ 
+ public class EnergyBalance {
+     private static double greenEnergy;
+-    private final static int totalEnergy = 5000;
++    private final static int totalEnergy = 500;
+     private static int fossileEnergy = (int) (totalEnergy - greenEnergy);
+ 
+ 
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"8e11df0e-7c6d-41d2-92e9-8711a404ec7c\" name=\"Changes\" comment=\"oprydning i git\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12-10-2022_11_41__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12-10-2022_11_41__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/mainDir/EnergySourceConstructor.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/mainDir/EnergySourceConstructor.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/mainDir/Game.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/mainDir/Game.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/mainDir/Main.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/mainDir/Main.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/mainDir/Room.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/mainDir/Room.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/mainDir/textUI/CommandLineClient.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/mainDir/textUI/CommandLineClient.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"CodeInsightWorkspaceSettings\">\r\n    <option name=\"optimizeImportsOnTheFly\" value=\"true\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Enum\" />\r\n        <option value=\"Class\" />\r\n        <option value=\"Interface\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"other_changes\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n    <option name=\"SWAP_SIDES_IN_COMPARE_BRANCHES\" value=\"true\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProblemsViewState\">\r\n    <option name=\"selectedTabId\" value=\"CurrentFile\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2G1pMCKuLBQ98AxykGLFbg0ipD3\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;ToolWindowChanges.ShowToolbar&quot;: &quot;false&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/bertr/OneDrive/Skrivebord/Skole/SemesterProjekt/worldOfEnergy/src&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CreateClassDialog.RecentsKey\">\r\n      <recent name=\"mainDir\" />\r\n    </key>\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\bertr\\OneDrive\\Skrivebord\\Skole\\SemesterProjekt\\worldOfEnergy\\src\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"8e11df0e-7c6d-41d2-92e9-8711a404ec7c\" name=\"Changes\" comment=\"\" />\r\n      <created>1665565894269</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1665565894269</updated>\r\n      <workItem from=\"1665565896856\" duration=\"659000\" />\r\n      <workItem from=\"1665591697131\" duration=\"4221000\" />\r\n      <workItem from=\"1665598665658\" duration=\"3262000\" />\r\n      <workItem from=\"1665603440706\" duration=\"801000\" />\r\n      <workItem from=\"1665611891884\" duration=\"476000\" />\r\n      <workItem from=\"1666731541078\" duration=\"531000\" />\r\n      <workItem from=\"1666779169363\" duration=\"1529000\" />\r\n      <workItem from=\"1666988487385\" duration=\"212000\" />\r\n      <workItem from=\"1667295215595\" duration=\"315000\" />\r\n      <workItem from=\"1667309374833\" duration=\"774000\" />\r\n      <workItem from=\"1667459768205\" duration=\"1394000\" />\r\n      <workItem from=\"1667461422249\" duration=\"10785000\" />\r\n      <workItem from=\"1667474697952\" duration=\"11648000\" />\r\n      <workItem from=\"1667555440440\" duration=\"5480000\" />\r\n      <workItem from=\"1667573237970\" duration=\"4062000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"test\">\r\n      <created>1665567428682</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1665567428682</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"test\">\r\n      <created>1665567662999</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1665567662999</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Hurtig ligegyldig opdatering\">\r\n      <created>1665576355333</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1665576355333</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Room and EnergySourceConstructor has been built and Game, is partially build\">\r\n      <created>1665601406648</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1665601406648</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"createRooms method has been added to game. Rooms now have exits which are implemented the same way as in WorldOfZuul\">\r\n      <created>1665604010526</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1665604010526</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Wallet er blevet gjort static og der er lavet rettelser\">\r\n      <created>1666682591641</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1666682591641</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Fucking mange ændringer 25-10-2022\">\r\n      <created>1666779223504</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1666779223504</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"Warnings er blevet fjernet. Og quiz strings er blevet erstattet med 'tekstblokke'.\">\r\n      <created>1666780243775</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1666780243775</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"opdateret spil\">\r\n      <created>1667460059392</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1667460059392</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"Changes by Kenny\">\r\n      <created>1667460248149</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1667460248149</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"Fandens masse ændringer. Man kan nu bygge Vindmøller og snart kan man bygge de andre også\">\r\n      <created>1667486438529</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1667486438529</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"Changes by Kenny\">\r\n      <created>1667555883072</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1667555883072</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00013\" summary=\"oprydning i git\">\r\n      <created>1667556017671</created>\r\n      <option name=\"number\" value=\"00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1667556017671</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00014\" summary=\"oprydning i git\">\r\n      <created>1667556073105</created>\r\n      <option name=\"number\" value=\"00014\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1667556073105</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"15\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.History.Properties\">\r\n    <option name=\"COLUMN_ID_ORDER\">\r\n      <list>\r\n        <option value=\"Default.Root\" />\r\n        <option value=\"Default.Author\" />\r\n        <option value=\"Default.Date\" />\r\n        <option value=\"Default.Subject\" />\r\n        <option value=\"Space.CommitStatus\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"master\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"test\" />\r\n    <MESSAGE value=\"Hurtig ligegyldig opdatering\" />\r\n    <MESSAGE value=\"Room and EnergySourceConstructor has been built and Game, is partially build\" />\r\n    <MESSAGE value=\"createRooms method has been added to game. Rooms now have exits which are implemented the same way as in WorldOfZuul\" />\r\n    <MESSAGE value=\"Wallet er blevet gjort static og der er lavet rettelser\" />\r\n    <MESSAGE value=\"Changes by marcu\" />\r\n    <MESSAGE value=\"flere ændringer\" />\r\n    <MESSAGE value=\"Den sidste version efter vi afsluttede 25-10-2022\" />\r\n    <MESSAGE value=\"Fucking mange ændringer 25-10-2022\" />\r\n    <MESSAGE value=\"Warnings er blevet fjernet. Og quiz strings er blevet erstattet med 'tekstblokke'.\" />\r\n    <MESSAGE value=\"opdateret spil\" />\r\n    <MESSAGE value=\"lidt mere\" />\r\n    <MESSAGE value=\"textUI er tilføjet. Der mangler kommandoer til at bygge energikilder og til at opdatere turnCounter\" />\r\n    <MESSAGE value=\"Fandens masse ændringer. Man kan nu bygge Vindmøller og snart kan man bygge de andre også\" />\r\n    <MESSAGE value=\"Changes by mac\" />\r\n    <MESSAGE value=\"Changes by Kenny\" />\r\n    <MESSAGE value=\"oprydning i git\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"oprydning i git\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <breakpoint enabled=\"true\" type=\"java-exception\">\r\n          <properties class=\"java.lang.NullPointerException\" package=\"java.lang\" />\r\n          <option name=\"timeStamp\" value=\"1\" />\r\n        </breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision e49bdfe50f73c62d4eaca5f6fb4756a309ab20a2)
++++ b/.idea/workspace.xml	(date 1668504290100)
+@@ -4,15 +4,15 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="8e11df0e-7c6d-41d2-92e9-8711a404ec7c" name="Changes" comment="oprydning i git">
++    <list default="true" id="8e11df0e-7c6d-41d2-92e9-8711a404ec7c" name="Changes" comment="test">
+       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12-10-2022_11_41__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12-10-2022_11_41__Changes_.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/mainDir/EnergySourceConstructor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/EnergySourceConstructor.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/mainDir/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/Game.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/mainDir/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/Main.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/mainDir/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/Room.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/mainDir/textUI/CommandLineClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/textUI/CommandLineClient.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/mainDir/EnergyBalance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/EnergyBalance.java" afterDir="false" />
+     </list>
++    <list id="4eddf5a6-7a71-43a6-8e5d-3e41453c2254" name="Changes by Kenny" comment="Changes by Kenny" />
++    <list id="c15efa6b-34fd-4847-aa10-09aba8121368" name="Changes by mac" comment="" />
++    <list id="4dadb8a0-0bfa-4523-a95e-9aa54500e4c8" name="Changes by marcu" comment="Den sidste version efter vi afsluttede 25-10-2022" />
++    <list id="9eba1b26-d792-4e21-85f7-bb1d205792d1" name="Changes by wesambaroudi" comment="" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -24,26 +24,16 @@
+   <component name="FileTemplateManagerImpl">
+     <option name="RECENT_TEMPLATES">
+       <list>
+-        <option value="Enum" />
+-        <option value="Class" />
+         <option value="Interface" />
++        <option value="Class" />
+       </list>
+     </option>
+   </component>
+   <component name="Git.Settings">
+-    <option name="RECENT_BRANCH_BY_REPOSITORY">
+-      <map>
+-        <entry key="$PROJECT_DIR$" value="other_changes" />
+-      </map>
+-    </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+-    <option name="SWAP_SIDES_IN_COMPARE_BRANCHES" value="true" />
+   </component>
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+-  </component>
+-  <component name="ProblemsViewState">
+-    <option name="selectedTabId" value="CurrentFile" />
+   </component>
+   <component name="ProjectId" id="2G1pMCKuLBQ98AxykGLFbg0ipD3" />
+   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+@@ -57,29 +47,18 @@
+   &quot;keyToString&quot;: {
+     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;ToolWindowChanges.ShowToolbar&quot;: &quot;false&quot;,
+     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;C:/Users/bertr/OneDrive/Skrivebord/Skole/SemesterProjekt/worldOfEnergy/src&quot;,
++    &quot;last_opened_file_path&quot;: &quot;C:/Users/bertr/OneDrive/Skrivebord&quot;,
+     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
++    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+   }
+ }</component>
+-  <component name="RecentsManager">
+-    <key name="CreateClassDialog.RecentsKey">
+-      <recent name="mainDir" />
+-    </key>
+-    <key name="CopyFile.RECENT_KEYS">
+-      <recent name="C:\Users\bertr\OneDrive\Skrivebord\Skole\SemesterProjekt\worldOfEnergy\src" />
+-    </key>
+-  </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+@@ -98,11 +77,6 @@
+       <workItem from="1666988487385" duration="212000" />
+       <workItem from="1667295215595" duration="315000" />
+       <workItem from="1667309374833" duration="774000" />
+-      <workItem from="1667459768205" duration="1394000" />
+-      <workItem from="1667461422249" duration="10785000" />
+-      <workItem from="1667474697952" duration="11648000" />
+-      <workItem from="1667555440440" duration="5480000" />
+-      <workItem from="1667573237970" duration="4062000" />
+     </task>
+     <task id="LOCAL-00001" summary="test">
+       <created>1665567428682</created>
+@@ -160,83 +134,18 @@
+       <option name="project" value="LOCAL" />
+       <updated>1666780243775</updated>
+     </task>
+-    <task id="LOCAL-00009" summary="opdateret spil">
+-      <created>1667460059392</created>
+-      <option name="number" value="00009" />
+-      <option name="presentableId" value="LOCAL-00009" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1667460059392</updated>
+-    </task>
+-    <task id="LOCAL-00010" summary="Changes by Kenny">
+-      <created>1667460248149</created>
+-      <option name="number" value="00010" />
+-      <option name="presentableId" value="LOCAL-00010" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1667460248149</updated>
+-    </task>
+-    <task id="LOCAL-00011" summary="Fandens masse ændringer. Man kan nu bygge Vindmøller og snart kan man bygge de andre også">
+-      <created>1667486438529</created>
+-      <option name="number" value="00011" />
+-      <option name="presentableId" value="LOCAL-00011" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1667486438529</updated>
+-    </task>
+-    <task id="LOCAL-00012" summary="Changes by Kenny">
+-      <created>1667555883072</created>
+-      <option name="number" value="00012" />
+-      <option name="presentableId" value="LOCAL-00012" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1667555883072</updated>
+-    </task>
+-    <task id="LOCAL-00013" summary="oprydning i git">
+-      <created>1667556017671</created>
+-      <option name="number" value="00013" />
+-      <option name="presentableId" value="LOCAL-00013" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1667556017671</updated>
+-    </task>
+-    <task id="LOCAL-00014" summary="oprydning i git">
+-      <created>1667556073105</created>
+-      <option name="number" value="00014" />
+-      <option name="presentableId" value="LOCAL-00014" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1667556073105</updated>
+-    </task>
+-    <option name="localTasksCounter" value="15" />
++    <option name="localTasksCounter" value="9" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+     <option name="version" value="3" />
+-  </component>
+-  <component name="Vcs.Log.History.Properties">
+-    <option name="COLUMN_ID_ORDER">
+-      <list>
+-        <option value="Default.Root" />
+-        <option value="Default.Author" />
+-        <option value="Default.Date" />
+-        <option value="Default.Subject" />
+-        <option value="Space.CommitStatus" />
+-      </list>
+-    </option>
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+     <option name="TAB_STATES">
+       <map>
+         <entry key="MAIN">
+           <value>
+-            <State>
+-              <option name="FILTERS">
+-                <map>
+-                  <entry key="branch">
+-                    <value>
+-                      <list>
+-                        <option value="master" />
+-                      </list>
+-                    </value>
+-                  </entry>
+-                </map>
+-              </option>
+-            </State>
++            <State />
+           </value>
+         </entry>
+       </map>
+@@ -253,23 +162,6 @@
+     <MESSAGE value="Den sidste version efter vi afsluttede 25-10-2022" />
+     <MESSAGE value="Fucking mange ændringer 25-10-2022" />
+     <MESSAGE value="Warnings er blevet fjernet. Og quiz strings er blevet erstattet med 'tekstblokke'." />
+-    <MESSAGE value="opdateret spil" />
+-    <MESSAGE value="lidt mere" />
+-    <MESSAGE value="textUI er tilføjet. Der mangler kommandoer til at bygge energikilder og til at opdatere turnCounter" />
+-    <MESSAGE value="Fandens masse ændringer. Man kan nu bygge Vindmøller og snart kan man bygge de andre også" />
+-    <MESSAGE value="Changes by mac" />
+-    <MESSAGE value="Changes by Kenny" />
+-    <MESSAGE value="oprydning i git" />
+-    <option name="LAST_COMMIT_MESSAGE" value="oprydning i git" />
+-  </component>
+-  <component name="XDebuggerManager">
+-    <breakpoint-manager>
+-      <breakpoints>
+-        <breakpoint enabled="true" type="java-exception">
+-          <properties class="java.lang.NullPointerException" package="java.lang" />
+-          <option name="timeStamp" value="1" />
+-        </breakpoint>
+-      </breakpoints>
+-    </breakpoint-manager>
++    <option name="LAST_COMMIT_MESSAGE" value="Warnings er blevet fjernet. Og quiz strings er blevet erstattet med 'tekstblokke'." />
+   </component>
+ </project>
+\ No newline at end of file
