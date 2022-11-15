@@ -184,7 +184,12 @@ public class Room implements EnergySourceConstructor {
         System.out.printf("%-40s %-4s %s %d \n","Potential for Geothermal energy: "+ this.geoPot, "|", "Geothermal powerplants: ",getGeoplantCount());
         System.out.printf("%-40s %-4s %s %d \n","Potential for Solar energy: " +this.sunPot, "|", "Solar Panels: ",getSolarPanelCount());
         System.out.printf("%-40s %-4s %s %d \n", "Potential for Hydropowered energy: "+ this.waterPot, "|", "Hydro powerplants: ",getWaterplantCount());
-        System.out.println("You currently have " + Wallet.getCoins() + "in your wallet");
+        System.out.println();
+        System.out.println("You currently have " + Wallet.getCoins() + " in your wallet. To build type \"build\" + either:");
+        System.out.println("Windmill\n" +
+                "Geo Powerplant\n" +
+                "Solar Panel\n" +
+                "Hydro Powerplant");
     }
 
     public int getWindmillCount() {
