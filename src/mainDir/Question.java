@@ -1,3 +1,5 @@
+package mainDir;
+
 public class Question {
     String prompt;
     String answer;

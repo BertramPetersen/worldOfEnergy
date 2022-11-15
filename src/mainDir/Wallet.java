@@ -1,3 +1,5 @@
+package mainDir;
+
 public class Wallet {
     private static int coins=0;
 
@@ -18,7 +20,6 @@ public class Wallet {
     public static void subtractCoins(int amount) {
         coins -= amount;
     }
-
 
 }
 
