@@ -4,8 +4,8 @@ import java.time.Year;
 
 public class Forecast extends EnergyBalance {
 
-    static double seaLevel = 10; // unit cm
-    static double temperature = 15; // unit celsius
+    static double seaLevel = 5; // unit cm
+    static double temperature = 2; // unit celsius
     static double CO2 = 15; // unit billion ton
 
     static double decrease = ((EnergyBalance.getGreenEnergy()/EnergyBalance.getTotalEnergy())*100);// unit %
