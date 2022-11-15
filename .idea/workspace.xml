@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e11df0e-7c6d-41d2-92e9-8711a404ec7c" name="Changes" comment="tilføjet hello world">
+    <list default="true" id="8e11df0e-7c6d-41d2-92e9-8711a404ec7c" name="Changes" comment="Help extension er lavet i game med en metode &quot;gePrices&quot;, som bliver kaldt i CommandLineClient">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainDir/EnergySourceConstructor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/EnergySourceConstructor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainDir/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainDir/GeothermalPowerplant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/GeothermalPowerplant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainDir/HydroPowerplant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/HydroPowerplant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainDir/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainDir/SolarPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/SolarPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainDir/WindMill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/WindMill.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainDir/textUI/CommandLineClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/textUI/CommandLineClient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -274,7 +266,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668431766367</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Help extension er lavet i game med en metode &quot;gePrices&quot;, som bliver kaldt i CommandLineClient">
+      <created>1668515679457</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1668515679457</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -315,7 +314,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="test" />
     <MESSAGE value="Hurtig ligegyldig opdatering" />
     <MESSAGE value="Room and EnergySourceConstructor has been built and Game, is partially build" />
     <MESSAGE value="createRooms method has been added to game. Rooms now have exits which are implemented the same way as in WorldOfZuul" />
@@ -340,7 +338,8 @@
     <MESSAGE value="Colors.java has been added so that the colors of printed text can be changed.&#10;EnergyBalance.java has been overhauled so that the EnergyBalance is now presented as a progressbar&#10;Minor Changes to Game.welcome()" />
     <MESSAGE value="Minor bugfixes" />
     <MESSAGE value="tilføjet hello world" />
-    <option name="LAST_COMMIT_MESSAGE" value="tilføjet hello world" />
+    <MESSAGE value="Help extension er lavet i game med en metode &quot;gePrices&quot;, som bliver kaldt i CommandLineClient" />
+    <option name="LAST_COMMIT_MESSAGE" value="Help extension er lavet i game med en metode &quot;gePrices&quot;, som bliver kaldt i CommandLineClient" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

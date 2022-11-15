@@ -205,10 +205,10 @@ public class Game {
     }
 
     public void getPrices() {
-        System.out.println("Windmills cost: " + this.EnergyPrice[0].getPrice());
-        System.out.println("Hydro power plants cost: " + this.EnergyPrice[1].getPrice());
-        System.out.println("Solar Panels cost: " + this.EnergyPrice[2].getPrice());
-        System.out.println("Geothermal power plants cost: " + this.EnergyPrice[3].getPrice());
+        System.out.println("Windmills cost:                 " + this.EnergyPrice[0].getPrice());
+        System.out.println("Hydro power plants cost:        " + this.EnergyPrice[1].getPrice());
+        System.out.println("Solar Panels cost:              " + this.EnergyPrice[2].getPrice());
+        System.out.println("Geothermal power plants cost:   " + this.EnergyPrice[3].getPrice());
 
     }
 }
