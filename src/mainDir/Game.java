@@ -122,6 +122,7 @@ public class Game {
         EnergyBalance.show();
         promptEnterKey();
         playQuizOrRandomEvent();
+        winLoose();
     }
 
     public void updatePassiveIncome() {
@@ -215,4 +216,42 @@ public class Game {
         return !command.hasCommandValue();
     }
     public ArrayList<Room> getCreatedRooms(){return createdRooms;}
+
+    public void winLoose(){
+        if(this.turnCounter == 20 && (EnergyBalance.getGreenEnergy()/EnergyBalance.getTotalEnergy())*100 == 80){
+            System.out.println();
+            System.out.println("Congratulations you have won the game");
+            System.out.println("Thanks for playing the game <3");
+            System.out.println();
+            System.out.println("Press \"ENTER\" to end game");
+            promptEnterKey();
+            System.exit(0);
+
+
+        } else if (this.turnCounter == 1 && (EnergyBalance.getGreenEnergy()/ EnergyBalance.getTotalEnergy())*100 <= 50){
+            System.out.println();
+            System.out.println("you have sadly lost the game");
+            System.out.println("Thanks for playing the game <3");
+            System.out.println("'⠀⣞⢽⢪⢣⢣⢣⢫⡺⡵⣝⡮⣗⢷⢽⢽⢽⣮⡷⡽⣜⣜⢮⢺⣜⢷⢽⢝⡽⣝");
+            System.out.println("⠸⡸⠜⠕⠕⠁⢁⢇⢏⢽⢺⣪⡳⡝⣎⣏⢯⢞⡿⣟⣷⣳⢯⡷⣽⢽⢯⣳⣫⠇");
+            System.out.println("⠀⠀⢀⢀⢄⢬⢪⡪⡎⣆⡈⠚⠜⠕⠇⠗⠝⢕⢯⢫⣞⣯⣿⣻⡽⣏⢗⣗⠏⠀");
+            System.out.println("⠀⠪⡪⡪⣪⢪⢺⢸⢢⢓⢆⢤⢀⠀⠀⠀⠀⠈⢊⢞⡾⣿⡯⣏⢮⠷⠁⠀⠀");
+            System.out.println("⠀⠀⠀⠈⠊⠆⡃⠕⢕⢇⢇⢇⢇⢇⢏⢎⢎⢆⢄⠀⢑⣽⣿⢝⠲⠉");
+            System.out.println("⠀⠀⠀⠀⠀⡿⠂⠠⠀⡇⢇⠕⢈⣀⠀⠁⠡⠣⡣⡫⣂⣿⠯⢪⠰⠂⠀⠀⠀⠀");
+            System.out.println("⠀⠀⠀⠀⡦⡙⡂⢀⢤⢣⠣⡈⣾⡃⠠⠄⠀⡄⢱⣌⣶⢏⢊⠂⠀⠀⠀⠀⠀⠀");
+            System.out.println("⠀⠀⠀⠀⢝⡲⣜⡮⡏⢎⢌⢂⠙⠢⠐⢀⢘⢵⣽⣿⡿⠁⠁⠀⠀⠀⠀⠀⠀⠀");
+            System.out.println("⠀⠀⠀⠀⠨⣺⡺⡕⡕⡱⡑⡆⡕⡅⡕⡜⡼⢽⡻⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+            System.out.println("⠀⠀⠀⠀⣼⣳⣫⣾⣵⣗⡵⡱⡡⢣⢑⢕⢜⢕⡝⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+            System.out.println("⠀⠀⠀⣴⣿⣾⣿⣿⣿⡿⡽⡑⢌⠪⡢⡣⣣⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+            System.out.println("⠀⠀⠀⡟⡾⣿⢿⢿⢵⣽⣾⣼⣘⢸⢸⣞⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+            System.out.println("⠀⠀⠀⠀⠁⠇⠡⠩⡫⢿⣝⡻⡮⣒⢽⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+            System.out.println();
+            System.out.println("Press \"ENTER\" to end game");
+            promptEnterKey();
+            System.exit(0);
+
+            
+        }
+
+    }
 }

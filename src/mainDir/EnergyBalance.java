@@ -12,6 +12,7 @@ public class EnergyBalance {
         fossileEnergy = (int)(totalEnergy - greenEnergy);
     }
 
+
     public static double getGreenEnergy(){
         return greenEnergy;
     }
