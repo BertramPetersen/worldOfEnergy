@@ -7,5 +7,8 @@ public class WindMill extends EnergySource {
         super.name = "Windmill";
         super.passiveIncome = 40;
     }
+    public int showPrice(){
+        return price;
+    }
 
 }

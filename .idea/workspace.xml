@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
 
-    <list default="true" id="8e11df0e-7c6d-41d2-92e9-8711a404ec7c" name="Changes" comment="prøver at fikse projektet">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-
+    <list default="true" id="8e11df0e-7c6d-41d2-92e9-8711a404ec7c" name="Changes" comment="Help extension er lavet i game med en metode &quot;gePrices&quot;, som bliver kaldt i CommandLineClient">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainDir/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainDir/textUI/CommandLineClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/textUI/CommandLineClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainDir/textUI/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/textUI/Parser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,27 +28,11 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="8-der-skal-tilføjes-flere-forskellige-instanser-af-event" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="SWAP_SIDES_IN_COMPARE_BRANCHES" value="true" />
-  </component>
-  <component name="GithubProjectSettings">
-    <option name="branchProtectionPatterns">
-      <list>
-        <option value="master" />
-      </list>
-    </option>
-  </component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="recentSearchFilters">
-      <list>
-        <option value="state:closed" />
-        <option value="state:open" />
-        <option value="state:merged" />
-      </list>
-    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -285,42 +264,22 @@
       <option name="project" value="LOCAL" />
       <updated>1667930500410</updated>
     </task>
-    <task id="LOCAL-00021" summary="ASCII art til Hydro Powerplant tilføjet">
-      <created>1667935980266</created>
+
+    <task id="LOCAL-00021" summary="tilføjet hello world">
+      <created>1668431766367</created>
       <option name="number" value="00021" />
       <option name="presentableId" value="LOCAL-00021" />
       <option name="project" value="LOCAL" />
-      <updated>1667935980266</updated>
+      <updated>1668431766367</updated>
     </task>
-    <task id="LOCAL-00022" summary="ASCII ART for Solar Panel has been added">
-      <created>1667938571597</created>
+    <task id="LOCAL-00022" summary="Help extension er lavet i game med en metode &quot;gePrices&quot;, som bliver kaldt i CommandLineClient">
+      <created>1668515679457</created>
       <option name="number" value="00022" />
       <option name="presentableId" value="LOCAL-00022" />
       <option name="project" value="LOCAL" />
-      <updated>1667938571597</updated>
+      <updated>1668515679457</updated>
     </task>
-    <task id="LOCAL-00023" summary="prøver at fikse projektet">
-      <created>1668427386202</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1668427386202</updated>
-    </task>
-    <task id="LOCAL-00024" summary="prøver at fikse projektet">
-      <created>1668427690147</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1668427690147</updated>
-    </task>
-    <task id="LOCAL-00025" summary="prøver at fikse projektet">
-      <created>1668427696929</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1668427696929</updated>
-    </task>
-    <option name="localTasksCounter" value="26" />
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -361,6 +320,10 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="Hurtig ligegyldig opdatering" />
+    <MESSAGE value="Room and EnergySourceConstructor has been built and Game, is partially build" />
+    <MESSAGE value="createRooms method has been added to game. Rooms now have exits which are implemented the same way as in WorldOfZuul" />
+
     <MESSAGE value="Wallet er blevet gjort static og der er lavet rettelser" />
     <MESSAGE value="Changes by marcu" />
     <MESSAGE value="flere ændringer" />
@@ -381,12 +344,11 @@
     <MESSAGE value="Colors.java has been added so that the colors of printed text can be changed.&#10;EnergyBalance.java has been overhauled so that the EnergyBalance is now presented as a progressbar&#10;Minor Changes to Game.welcome" />
     <MESSAGE value="Colors.java has been added so that the colors of printed text can be changed.&#10;EnergyBalance.java has been overhauled so that the EnergyBalance is now presented as a progressbar&#10;Minor Changes to Game.welcome()" />
     <MESSAGE value="Minor bugfixes" />
-    <MESSAGE value="ASCII art til Hydro Powerplant tilføjet" />
-    <MESSAGE value="ASCII ART for Solar Panel has been added" />
-    <MESSAGE value="prøver at fikse projektet" />
-    <MESSAGE value="ignorerer .idea folder" />
-    <MESSAGE value="ligegyldig" />
-    <option name="LAST_COMMIT_MESSAGE" value="ligegyldig" />
+
+    <MESSAGE value="tilføjet hello world" />
+    <MESSAGE value="Help extension er lavet i game med en metode &quot;gePrices&quot;, som bliver kaldt i CommandLineClient" />
+    <option name="LAST_COMMIT_MESSAGE" value="Help extension er lavet i game med en metode &quot;gePrices&quot;, som bliver kaldt i CommandLineClient" />
+
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -395,6 +357,11 @@
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/mainDir/Game.java</url>
+          <line>207</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
