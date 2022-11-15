@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
-public class Game {
+public class Game implements dataService {
     int turnCounter;
     private Room location;
     ArrayList<Room> createdRooms;
@@ -93,6 +93,7 @@ public class Game {
     }
 
     // Return Command with String-input given by Parser.
+    @Override
     public Command getCommand(String word1, String word2) {
         return new CommandImplementation(commands.getCommand(word1), word2);
     }
@@ -115,8 +116,8 @@ public class Game {
     }
     public void updateTurn(){
         turnCounter++;
-        Forecast.update();
         EnergyBalance.UpdateGreenEnergy(getTotalPowerOutput());
+        Forecast.update();
         System.out.println();
         updatePassiveIncome();
         EnergyBalance.show();
@@ -161,7 +162,7 @@ public class Game {
         System.out.println("Do you want an introduction to World of Energy?\n" +
                 "Y/N");
         Scanner scanner = new Scanner(System.in);
-        if (!scanner.hasNext("N")){
+        if (!scanner.next().equalsIgnoreCase("n")){
             System.out.println("A turn-based game where you have to save the world from global warming...");
             promptEnterKey();
             System.out.println("Your job is to build sustainable energy sources in different countries around the world, to prevent global warming from escalating...");
@@ -195,14 +196,18 @@ public class Game {
             promptEnterKey();
             System.out.println("You can also earn additional money by correctly answering the quiz questions, which will appear after you have finished your turn.");
             promptEnterKey();
-            System.out.println(Colors.GREEN + "Now that you know the premise of the game, you can begin to populate World of Energy with renewable energy sources to tilt the energy balance in your favor. \n" +
-                    "Good luck!"+Colors.RESET);
+            System.out.println(Colors.GREEN + "Now that you know the premise of the game, you can begin to populate World of Energy with renewable energy sources to tilt the energy balance in your favor.");
+            promptEnterKey();
+            System.out.println("Hello... The year is " + Forecast.currentYear + ". The C02 emission is currently " + Forecast.CO2 + " billion ton a year...");
+            System.out.println("The average temperature has already increased with " + Forecast.temperature + "\u2103, and the world's sea level has risen with " + Forecast.seaLevel + "cm...");
+            promptEnterKey();
+            System.out.println("Hurry! Tilt the energy balance towards green energy to stop the them from increasing further...\n" +
+                    "Good luck!" + Colors.RESET);
             promptEnterKey();
             System.out.println();
             getRoomDescription();
         }
     }
-
     public void promptEnterKey(){
         Scanner scanner = new Scanner(System.in);
         scanner.nextLine();

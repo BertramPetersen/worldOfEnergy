@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+
     <list default="true" id="8e11df0e-7c6d-41d2-92e9-8711a404ec7c" name="Changes" comment="prøver at fikse projektet">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14-11-2022_12_40__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainDir/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainDir/textUI/CommandLineClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/textUI/CommandLineClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainDir/textUI/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/textUI/Parser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +25,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -38,6 +43,15 @@
     <option name="branchProtectionPatterns">
       <list>
         <option value="master" />
+      </list>
+    </option>
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="recentSearchFilters">
+      <list>
+        <option value="state:closed" />
+        <option value="state:open" />
+        <option value="state:merged" />
       </list>
     </option>
   </component>
@@ -82,6 +96,26 @@
       <recent name="C:\Users\bertr\OneDrive\Skrivebord\Skole\SemesterProjekt\worldOfEnergy\src" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="mainDir.textUI.Application" />
+      <module name="worldOfEnergy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mainDir.textUI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Application" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -108,7 +142,8 @@
       <workItem from="1667931347868" duration="2812000" />
       <workItem from="1667939044345" duration="813000" />
       <workItem from="1668427297046" duration="267000" />
-      <workItem from="1668427570003" duration="110000" />
+      <workItem from="1668427570003" duration="2121000" />
+      <workItem from="1668504037380" duration="1859000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1665567428682</created>
@@ -271,7 +306,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668427386202</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="prøver at fikse projektet">
+      <created>1668427690147</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1668427690147</updated>
+    </task>
+    <task id="LOCAL-00025" summary="prøver at fikse projektet">
+      <created>1668427696929</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1668427696929</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,8 +361,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Room and EnergySourceConstructor has been built and Game, is partially build" />
-    <MESSAGE value="createRooms method has been added to game. Rooms now have exits which are implemented the same way as in WorldOfZuul" />
     <MESSAGE value="Wallet er blevet gjort static og der er lavet rettelser" />
     <MESSAGE value="Changes by marcu" />
     <MESSAGE value="flere ændringer" />
@@ -337,7 +384,9 @@
     <MESSAGE value="ASCII art til Hydro Powerplant tilføjet" />
     <MESSAGE value="ASCII ART for Solar Panel has been added" />
     <MESSAGE value="prøver at fikse projektet" />
-    <option name="LAST_COMMIT_MESSAGE" value="prøver at fikse projektet" />
+    <MESSAGE value="ignorerer .idea folder" />
+    <MESSAGE value="ligegyldig" />
+    <option name="LAST_COMMIT_MESSAGE" value="ligegyldig" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
