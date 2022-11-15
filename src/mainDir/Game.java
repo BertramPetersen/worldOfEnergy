@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
-public class Game {
+public class Game implements dataService {
     int turnCounter;
     private Room location;
     ArrayList<Room> createdRooms;
@@ -93,6 +93,7 @@ public class Game {
     }
 
     // Return Command with String-input given by Parser.
+    @Override
     public Command getCommand(String word1, String word2) {
         return new CommandImplementation(commands.getCommand(word1), word2);
     }
@@ -161,7 +162,7 @@ public class Game {
         System.out.println("Do you want an introduction to World of Energy?\n" +
                 "Y/N");
         Scanner scanner = new Scanner(System.in);
-        if (!scanner.hasNext("N")){
+        if (!scanner.next().equalsIgnoreCase("n")){
             System.out.println("A turn-based game where you have to save the world from global warming...");
             promptEnterKey();
             System.out.println("Your job is to build sustainable energy sources in different countries around the world, to prevent global warming from escalating...");

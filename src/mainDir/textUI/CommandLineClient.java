@@ -1,9 +1,6 @@
 package mainDir.textUI;
 
-import mainDir.Command;
-import mainDir.Commands;
-import mainDir.Game;
-import mainDir.Wallet;
+import mainDir.*;
 
 public class CommandLineClient {
     private final Parser parser;
