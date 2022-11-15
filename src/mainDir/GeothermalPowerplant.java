@@ -1,9 +1,13 @@
 package mainDir;
 
 public class GeothermalPowerplant extends EnergySource {
+
     public GeothermalPowerplant(){
         super.price = 800;
         super.output = 0.9;
         super.name = "Geo Powerplant";
+    }
+    public int showPrice() {
+        return price;
     }
 }

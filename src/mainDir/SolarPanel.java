@@ -6,4 +6,7 @@ public class SolarPanel extends EnergySource {
         super.output = 0.2;
         super.name = "Solar Panel";
     }
+    public int showPrice() {
+        return price;
+    }
 }

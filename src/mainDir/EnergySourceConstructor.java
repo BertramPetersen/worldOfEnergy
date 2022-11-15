@@ -2,20 +2,26 @@ package mainDir;
 
 public interface EnergySourceConstructor {
     String[] types = {"Windmill", "Solar Panel", "Hydro Powerplant", "Geo Powerplant"};
-    static EnergySource constructWind() { return new WindMill(); }
+
+    static EnergySource constructWind() {
+        return new WindMill();
+    }
+
     static EnergySource constructHydro() {
         return new HydroPowerplant();
     }
+
     static EnergySource constructGeo() {
         return new GeothermalPowerplant();
     }
 
-    static EnergySource constructSolar(){
+    static EnergySource constructSolar() {
         return new SolarPanel();
     }
 
     boolean ValidateFunds(EnergySource e);
-    static void printWindmill(){
+
+    static void printWindmill() {
         System.out.println("                                      __");
         System.out.println("                ,-_                  (`  ).");
         System.out.println("                |-_'-,              (     ).");
@@ -34,7 +40,8 @@ public interface EnergySourceConstructor {
 
 
     }
-    static void printWaterPump(){
+
+    static void printWaterPump() {
         System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
         System.out.println("⠀⠀⠀⠀⠀⠀⠀⣰⠋⠉⠉⢷⠒⠒⠶⣄⡀⠀⠀⠀⠀⠀");
         System.out.println("⠀⠀⠀⠀⠀⠀⠀⠹⣄⣀⣠⡾⠴⠤⣄⠀⠻⡄⠀⠀⠀⠀");

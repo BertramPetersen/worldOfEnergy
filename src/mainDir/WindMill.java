@@ -6,4 +6,7 @@ public class WindMill extends EnergySource {
         super.output = 0.4;
         super.name = "Windmill";
     }
+    public int showPrice(){
+        return price;
+    }
 }

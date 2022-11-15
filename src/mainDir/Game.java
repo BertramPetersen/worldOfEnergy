@@ -6,12 +6,14 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
+
 public class Game {
     int turnCounter;
     private Room location;
     ArrayList<Room> createdRooms;
     HashMap<String, Room> roomMap;
     private CommandWords commands;
+    public EnergySource EnergyPrice[] = {new WindMill(), new HydroPowerplant(), new SolarPanel(), new GeothermalPowerplant()};
 
     Quiz quiz;
 
@@ -60,7 +62,7 @@ public class Game {
 
         // Here we set exits of all rooms except airport to the room airport
         for (Room room : createdRooms) {
-            if (!room.getName().equalsIgnoreCase("airport")){
+            if (!room.getName().equalsIgnoreCase("airport")) {
                 room.setExit("AIRPORT", airport);
             }
         }
@@ -88,7 +90,8 @@ public class Game {
             return true;
         }
     }
-    public CommandWords getCommands(){
+
+    public CommandWords getCommands() {
         return commands;
     }
 
@@ -96,24 +99,27 @@ public class Game {
     public Command getCommand(String word1, String word2) {
         return new CommandImplementation(commands.getCommand(word1), word2);
     }
+
     public void getRoomDescription() {
-        if(this.location.getName().equals("Airport")){
+        if (this.location.getName().equals("Airport")) {
             System.out.println("You are now at the airport, and can go to any region in World of Energy");
             System.out.println("You can go to any of these destination by typing 'go to' " +
                     "plus any of the below destinations");
             // Prints all rooms except Airport as it is the last index
-            for (int i = 0; i < createdRooms.size()-2; i=i+2) {
-                System.out.printf("%-24s %s\n", createdRooms.get(i).getName(), createdRooms.get(i+1).getName());
+            for (int i = 0; i < createdRooms.size() - 2; i = i + 2) {
+                System.out.printf("%-24s %s\n", createdRooms.get(i).getName(), createdRooms.get(i + 1).getName());
             }
-        }else{
+        } else {
             location.getLongDescription();
         }
     }
-    public List<String> getCommandDescription(){
+
+    public List<String> getCommandDescription() {
         System.out.println(this.location.getName());
         return commands.getCommandWords();
     }
-    public void updateTurn(){
+
+    public void updateTurn() {
         turnCounter++;
         Forecast.update();
         EnergyBalance.UpdateGreenEnergy(getTotalPowerOutput());
@@ -123,22 +129,24 @@ public class Game {
         quiz.takeQuiz();
         randomEvent.initiateRandomEvent();
     }
+
     // Collects PowerOutput for each room in the game. Look at Room.updateOutput()
-    public double getTotalPowerOutput(){
+    public double getTotalPowerOutput() {
         double p = 0;
-        for (Room room : createdRooms){
+        for (Room room : createdRooms) {
             p += room.getRealPowerOutput();
         }
         return p;
     }
-    public void welcome(){
+
+    public void welcome() {
         System.out.println("Welcome to World of Energy\n" +
                 "Press \"ENTER\" to continue...");
         promptEnterKey();
         System.out.println("Do you want an introduction to World of Energy?\n" +
                 "Y/N");
         Scanner scanner = new Scanner(System.in);
-        if (!scanner.hasNext("N")){
+        if (!scanner.hasNext("N")) {
             System.out.println("A turn-based game where you have to save the world from global warming...");
             promptEnterKey();
             System.out.println("Your job is to build sustainable energy sources in different countries around the world, to prevent global warming from escalating...");
@@ -170,21 +178,37 @@ public class Game {
             promptEnterKey();
             System.out.println();
             System.out.println(Colors.GREEN + "You can now begin to populate World of Energy with renewable energy sources" +
-                    " to tilt the energy balance in your favor"+Colors.RESET);
+                    " to tilt the energy balance in your favor" + Colors.RESET);
             getRoomDescription();
         }
     }
 
-    public void promptEnterKey(){
+    public void promptEnterKey() {
         Scanner scanner = new Scanner(System.in);
         scanner.nextLine();
     }
-    public boolean construct(String type){
+
+    public boolean construct(String type) {
         return this.location.constructEnergy(type);
     }
-    public String whereAmI(){return location.getName();}
+
+    public String whereAmI() {
+        return location.getName();
+    }
+
     public boolean quit(Command command) {
         return !command.hasCommandValue();
     }
-    public ArrayList<Room> getCreatedRooms(){return createdRooms;}
+
+    public ArrayList<Room> getCreatedRooms() {
+        return createdRooms;
+    }
+
+    public void getPrices() {
+        System.out.println("Windmills cost: " + this.EnergyPrice[0].getPrice());
+        System.out.println("Hydro power plants cost: " + this.EnergyPrice[1].getPrice());
+        System.out.println("Solar Panels cost: " + this.EnergyPrice[2].getPrice());
+        System.out.println("Geothermal power plants cost: " + this.EnergyPrice[3].getPrice());
+
+    }
 }
