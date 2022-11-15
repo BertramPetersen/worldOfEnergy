@@ -19,6 +19,17 @@ public class EnergyBalance {
         return totalEnergy;
     }
 
+    public double DisplayGreenEnergy() {
+        return greenEnergy;
+    }
+
+    public double DisplayFossileEnergy() {
+        return fossileEnergy;
+    }
+
+    public double DisplayTotalEnergy() {
+        return totalEnergy;
+    }
 
     public static void show(){
         double greenPercent = (greenEnergy / totalEnergy) * 100;
