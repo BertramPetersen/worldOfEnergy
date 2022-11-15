@@ -6,11 +6,23 @@ import java.util.Scanner;
 
 public class Quiz {
     private int i = 0; // used in "takeQuiz"
+    private int correct = 0;//counter for correct answers
+
+    private int incorrect = 0;//counter for incorrect answers
 
     public Quiz(){
         createQuestions();
         Collections.shuffle(questions);
     }
+    public int getCorrect(){
+        return correct;
+    }
+
+    public  int getIncorrect(){
+        return incorrect;
+    }
+
+
     // Create the list of questions and their respective answers
     public ArrayList<Question> questions = new ArrayList<>();
     public void createQuestions () {
@@ -180,10 +192,12 @@ public class Quiz {
                 Wallet.addCoins(50);
                 System.out.println("You now have " + Wallet.getCoins() + " coins in your wallet");
                 i++; // Progresses to next prompt and answer in the "worldOfEnergy.mainDir.Question[] questions" array
+                correct++;
             } else {
                 System.out.println("Oh no! Your answer was incorrect. The correct answer was " + questions.get(i).answer + ".");
                 System.out.println("You unfortunately get 0 coins. Better luck next time!");
                 i++; // Progresses to next prompt and answer in the "questions" arraylist
+                incorrect++;
             }
         } catch (IndexOutOfBoundsException e) {
             i = 0;
