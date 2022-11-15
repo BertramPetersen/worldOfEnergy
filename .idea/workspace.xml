@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+
     <list default="true" id="8e11df0e-7c6d-41d2-92e9-8711a404ec7c" name="Changes" comment="prøver at fikse projektet">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainDir/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainDir/textUI/CommandLineClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/textUI/CommandLineClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainDir/textUI/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainDir/textUI/Parser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +25,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -90,6 +95,26 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\bertr\OneDrive\Skrivebord\Skole\SemesterProjekt\worldOfEnergy\src" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="mainDir.textUI.Application" />
+      <module name="worldOfEnergy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mainDir.textUI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Application" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -336,8 +361,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Room and EnergySourceConstructor has been built and Game, is partially build" />
-    <MESSAGE value="createRooms method has been added to game. Rooms now have exits which are implemented the same way as in WorldOfZuul" />
     <MESSAGE value="Wallet er blevet gjort static og der er lavet rettelser" />
     <MESSAGE value="Changes by marcu" />
     <MESSAGE value="flere ændringer" />
@@ -361,7 +384,9 @@
     <MESSAGE value="ASCII art til Hydro Powerplant tilføjet" />
     <MESSAGE value="ASCII ART for Solar Panel has been added" />
     <MESSAGE value="prøver at fikse projektet" />
-    <option name="LAST_COMMIT_MESSAGE" value="prøver at fikse projektet" />
+    <MESSAGE value="ignorerer .idea folder" />
+    <MESSAGE value="ligegyldig" />
+    <option name="LAST_COMMIT_MESSAGE" value="ligegyldig" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
