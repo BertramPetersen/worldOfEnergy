@@ -115,8 +115,8 @@ public class Game {
     }
     public void updateTurn(){
         turnCounter++;
-        Forecast.update();
         EnergyBalance.UpdateGreenEnergy(getTotalPowerOutput());
+        Forecast.update();
         System.out.println();
         updatePassiveIncome();
         EnergyBalance.show();
