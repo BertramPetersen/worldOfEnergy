@@ -4,7 +4,7 @@ import mainDir.util.Colors;
 
 public class EnergyBalance {
     private static double greenEnergy;
-    private final static int totalEnergy = 5000;
+    private final static int totalEnergy = 500;
     private static int fossileEnergy = (int) (totalEnergy - greenEnergy);
     public static void UpdateGreenEnergy(double greenEnergy) {
 
@@ -19,17 +19,6 @@ public class EnergyBalance {
         return totalEnergy;
     }
 
-    public double DisplayGreenEnergy() {
-        return greenEnergy;
-    }
-
-    public double DisplayFossileEnergy() {
-        return fossileEnergy;
-    }
-
-    public double DisplayTotalEnergy() {
-        return totalEnergy;
-    }
 
     public static void show(){
         double greenPercent = (greenEnergy / totalEnergy) * 100;
