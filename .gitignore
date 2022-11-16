@@ -1,11 +1,18 @@
 ### IntelliJ IDEA ###
 out/
 .idea/
+<<<<<<< HEAD
 .idea/vcs.xml
 .idea/workspace.xml
 .idea/workspace.xml
 !**/src/main/**/out/
 !**/src/test/**/out/
+=======
+.idea/workspace.xml
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+>>>>>>> master
 
 ### Eclipse ###
 .apt_generated

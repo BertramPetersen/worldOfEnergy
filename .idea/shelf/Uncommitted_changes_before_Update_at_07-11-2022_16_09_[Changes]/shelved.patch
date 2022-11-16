@@ -1,0 +1,156 @@
+Index: src/Forecast.java
+===================================================================
+diff --git a/src/Forecast.java b/src/Forecast.java
+--- a/src/Forecast.java	
++++ b/src/Forecast.java	
+@@ -1,64 +1,2 @@
+-public class Forecast extends EnergyBalance {
+-
+-    static double seaLevel = 9.7; //enhed cm
+-    static double temperature = 14; // enhed celsius
+-    static double CO2 = 15.3; // enhed billion ton
+-
+-    static double waterIncrease = 1.04; // enhed  %
+-    static double temperatureIncrease = 1.08; // enhed %
+-    static double CO2Increase = 1.10;//enhed %
+-
+-    static double decrease = 0.1;//enhed %
+-
+-
+-    public static void increase(double increaseFactor) {
+-
+-        seaLevel = seaLevel * increaseFactor;
+-        temperature = temperature * increaseFactor;
+-        CO2 = CO2 * increaseFactor;
+-
+-        System.out.printf("the sea level has risen to: %.2f cm. \n", seaLevel);
+-        System.out.printf("The temperature has risen to: %.2f degrees. \n", temperature);
+-        System.out.printf("The CO2 emission has risen to: %.2f tonnes. \n", CO2);
+-
+-    }
+-
+-    public static void decrease(double decrease) {
+-        seaLevel = seaLevel * decrease;
+-        temperature = temperature * decrease;
+-        CO2 = CO2 * decrease;
+-
+-        System.out.printf("the sea level has decreased to:  %.2f cm.\n", seaLevel);
+-        System.out.printf("the temperature has decreased to:  %.2f degrees \n", temperature);
+-        System.out.printf("the CO2 level has decreased to:  %.2f ton \n", CO2);
+-
+-    }
+-
+-    public static void update() {
+-        if (EnergyBalance.getGreenEnergy() <= EnergyBalance.getTotalEnergy()) {
+-            seaLevel = seaLevel * waterIncrease;
+-            temperature = temperature * temperatureIncrease;
+-            CO2 = CO2 * CO2Increase;
+-            System.out.printf("the sea level has risen to: %.2f cm \n", seaLevel);
+-            System.out.println("if you continue with this the sea level will increase with: " + waterIncrease + "% per year");
+-            System.out.printf("The temperature has risen to: %.2f degrees \n", temperature);
+-            System.out.println("if you continue with this the temperature wil increase with " + temperatureIncrease + "% per year");
+-            System.out.printf("The CO2 emission has risen to:  %.2f ton \n", CO2);
+-            System.out.println("if you continue with this the CO2 wil increase with " + CO2Increase + "% per year");
+-        } else {
+-            seaLevel = seaLevel * decrease;
+-            temperature = temperature * decrease;
+-            CO2 = CO2 * decrease;
+-
+-            System.out.printf("the sea level has decreased to:  %.2f cm \n", seaLevel);
+-            System.out.println("Great job, with your work the water level will decrease with " + decrease + "% per year");
+-            System.out.printf("the temperature has decreased to: %.2f degrees \n", temperature);
+-            System.out.printf("Great job, with your work the temperature will decrease with %.2f percent per year \n", (decrease - 1) * 100);
+-            System.out.printf("the CO2 level has decreased to: %.2f ton \n",  CO2);
+-            System.out.println("Great job, with your work the CO2 level will decrease with " + decrease + "% per year");
+-
+-
+-        }
+-    }
++public class Forecast {
+ }
+-
+Index: src/EnergyBalance.java
+===================================================================
+diff --git a/src/EnergyBalance.java b/src/EnergyBalance.java
+--- a/src/EnergyBalance.java	
++++ b/src/EnergyBalance.java	
+@@ -1,2 +1,78 @@
+-public class EnergyBalance {
++public abstract class EnergyBalance {
++    protected int GreenEnergy;
++
++    protected int FossileEnergy = 100;
++
++    protected int TotalEnergy;
++
++protected void add(){
++    GreenEnergy++;
+ }
++protected void Remove(){
++    GreenEnergy--;
++}
++protected int DisplayGreenEnergy(){
++    return GreenEnergy;
++}
++protected  int DisplayFossileEnergy(){
++    return FossileEnergy;
++}
++protected  int DisplayTotalEnergy(){
++    return TotalEnergy;
++}
++
++}
++
++class Windmill extends EnergyBalance {
++    public static void WindEnergy (String[] args){
++    if(new WindMill() ) {
++        new Windmill() = new Windmill;
++        Windmill d = new Windmill;
++        d.add();
++    }
++    if (new Windmill() = null){
++Windmill e = new Windmill();
++e.Remove(); // vidste ikke helt hvordan man skulle remove energy, dette er blot mit udkast
++    }
++    }
++
++}
++class SolarPanel extends EnergyBalance {
++    public static void SolarEnergy(String[] args) {
++        if (new SolarPanel()) {
++            new SolarPanel() = new SolarPanel;
++            SolarPanel a = new SolarPanel;
++            a.add();
++        }
++if (new SolarPanel() = null){
++    SolarPanel b = new SolarPanel();
++    b.Remove();
++}
++    }
++}
++class WaterHydroplant extends EnergyBalance{
++public static void WaterEnergy (String[] args){
++    if(new WaterHydroplant()){
++        new WaterHydroplant() = new WaterHydroplant;
++
++        WaterHydroplant b = new WaterHydroplant;
++        b.add();
++    }
++    if(new WaterHydroplant()= null) {
++        WaterHydroplant c = WaterHydroplant();
++        c.Remove();
++    }
++}
++    }
++
++    class Display extends EnergyBalance{
++    public void Show (String[] args){
++        System.out.println("amount of green energy: "+ GreenEnergy);
++        System.out.println("amount of fossile energy: "+ FossileEnergy);
++        TotalEnergy = FossileEnergy - GreenEnergy;
++        System.out.println("amount of total energy: "+ TotalEnergy);
++
++    }
++    }
++
++
