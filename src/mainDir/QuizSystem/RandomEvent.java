@@ -1,10 +1,12 @@
-package mainDir;
+package mainDir.QuizSystem;
+
+import mainDir.Forecast;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
-public class RandomEvent {
+public class RandomEvent implements QuizService{
     private int i;
 
     public ArrayList<Events> events = new ArrayList<>();
@@ -49,5 +51,7 @@ public class RandomEvent {
         }
         i++;
     }
+    @Override
+    public void takeQuiz(){}
 }
 

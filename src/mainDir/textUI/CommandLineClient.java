@@ -4,7 +4,7 @@ import mainDir.*;
 
 public class CommandLineClient {
     private final Parser parser;
-    private final Game game;
+    private final DataService game;
 
     public CommandLineClient(){
         this.game = new Game();

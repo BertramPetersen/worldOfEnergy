@@ -1,8 +1,7 @@
 package mainDir.textUI;
 
 import mainDir.Command;
-import mainDir.Game;
-import mainDir.dataService;
+import mainDir.DataService;
 
 import java.util.Scanner;
 
@@ -10,9 +9,9 @@ import java.util.Scanner;
 public class Parser
 {
     private Scanner reader;
-    private final dataService dataService;
+    private final DataService dataService;
 
-    public Parser(Game game)
+    public Parser(DataService game)
     {
         this.dataService = game;
         this.reader = new Scanner(System.in);

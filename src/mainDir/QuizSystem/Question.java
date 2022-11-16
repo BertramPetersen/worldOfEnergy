@@ -1,4 +1,4 @@
-package mainDir;
+package mainDir.QuizSystem;
 
 public class Question {
     String prompt;
