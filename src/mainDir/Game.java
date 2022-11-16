@@ -10,12 +10,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
-<<<<<<< HEAD
-public class Game implements DataService {
-=======
 
-public class Game implements dataService {
->>>>>>> master
+public class Game implements DataService {
+
     int turnCounter;
     private Room location;
     ArrayList<Room> createdRooms;
@@ -108,11 +105,7 @@ public class Game implements dataService {
     public Command getCommand(String word1, String word2) {
         return new CommandImplementation(commands.getCommand(word1), word2);
     }
-<<<<<<< HEAD
     @Override
-=======
-
->>>>>>> master
     public void getRoomDescription() {
         if (this.location.getName().equals("Airport")) {
             System.out.println("You are now at the airport, and can go to any region in World of Energy");
@@ -126,7 +119,7 @@ public class Game implements dataService {
             location.getLongDescription();
         }
     }
-<<<<<<< HEAD
+
     @Override
     public List<String> getCommandDescription(){
         System.out.println(this.location.getName());
@@ -134,15 +127,6 @@ public class Game implements dataService {
     }
     @Override
     public void updateTurn(){
-=======
-
-    public List<String> getCommandDescription() {
-        System.out.println(this.location.getName());
-        return commands.getCommandWords();
-    }
-
-    public void updateTurn() {
->>>>>>> master
         turnCounter++;
         EnergyBalance.UpdateGreenEnergy(getTotalPowerOutput());
         Forecast.update();
@@ -184,13 +168,9 @@ public class Game implements dataService {
         }
         return p;
     }
-<<<<<<< HEAD
+
     @Override
     public void welcome(){
-=======
-
-    public void welcome() {
->>>>>>> master
         System.out.println("Welcome to World of Energy\n" +
                 "Press \"ENTER\" to continue...");
         promptEnterKey();
@@ -253,7 +233,6 @@ public class Game implements dataService {
         Scanner scanner = new Scanner(System.in);
         scanner.nextLine();
     }
-<<<<<<< HEAD
     @Override
     public boolean construct(String type){
         return this.location.constructEnergy(type);
@@ -261,17 +240,6 @@ public class Game implements dataService {
     @Override
     public String whereAmI(){return location.getName();}
     @Override
-=======
-
-    public boolean construct(String type) {
-        return this.location.constructEnergy(type);
-    }
-
-    public String whereAmI() {
-        return location.getName();
-    }
-
->>>>>>> master
     public boolean quit(Command command) {
         return !command.hasCommandValue();
     }
@@ -279,7 +247,7 @@ public class Game implements dataService {
     public ArrayList<Room> getCreatedRooms() {
         return createdRooms;
     }
-
+    @Override
     public void getPrices() {
         System.out.println("Windmills cost:                 " + this.EnergyPrice[0].getPrice());
         System.out.println("Hydro power plants cost:        " + this.EnergyPrice[1].getPrice());

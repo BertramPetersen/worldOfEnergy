@@ -12,4 +12,5 @@ public interface DataService {
     void updateTurn();
     String whereAmI();
     List<String> getCommandDescription();
+    void getPrices();
 }
