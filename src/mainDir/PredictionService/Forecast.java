@@ -1,14 +1,14 @@
-package mainDir;
+package mainDir.PredictionService;
 
 import java.time.Year;
 
-public class Forecast extends EnergyBalance {
+public class Forecast extends EnergyBalance{
 
     static double seaLevel = 5; // unit cm
     static double temperature = 2; // unit celsius
     static double CO2 = 15; // unit billion ton
 
-    static double decrease = ((EnergyBalance.getGreenEnergy()/EnergyBalance.getTotalEnergy())*100);// unit %
+    static double decrease = ((PredictionService.getGreenEnergy()/ PredictionService.getTotalEnergy())*100);// unit %
 
     static int currentYear = Year.now().getValue();
     public static void increase(double increaseFactor) {
@@ -36,10 +36,10 @@ public class Forecast extends EnergyBalance {
 
     }
     public static void update() {
-        if (EnergyBalance.getGreenEnergy() <= EnergyBalance.getTotalEnergy()) {
-            double waterIncrease = 100-((EnergyBalance.getGreenEnergy()/EnergyBalance.getTotalEnergy())*100); // unit  %
-            double temperatureIncrease = 100-((EnergyBalance.getGreenEnergy()/EnergyBalance.getTotalEnergy())*100); // unit %
-            double CO2Increase = 100-((EnergyBalance.getGreenEnergy()/EnergyBalance.getTotalEnergy())*100);// unit %
+        if (PredictionService.getGreenEnergy() <= PredictionService.getTotalEnergy()) {
+            double waterIncrease = 100-((PredictionService.getGreenEnergy()/ PredictionService.getTotalEnergy())*100); // unit  %
+            double temperatureIncrease = 100-((PredictionService.getGreenEnergy()/ PredictionService.getTotalEnergy())*100); // unit %
+            double CO2Increase = 100-((PredictionService.getGreenEnergy()/ PredictionService.getTotalEnergy())*100);// unit %
 
             seaLevel *= (1 + (waterIncrease/100));
             temperature *=  (1 + (temperatureIncrease/100));
@@ -54,7 +54,7 @@ public class Forecast extends EnergyBalance {
             System.out.println("---------------------------------------------------------------------------------------");
 
         } else {
-            double decrease = ((EnergyBalance.getGreenEnergy()/EnergyBalance.getTotalEnergy())*100);// unit %
+            double decrease = ((PredictionService.getGreenEnergy()/ PredictionService.getTotalEnergy())*100);// unit %
             seaLevel *= (decrease/100);
             temperature *= (decrease/100);
             CO2 *= (decrease/100);

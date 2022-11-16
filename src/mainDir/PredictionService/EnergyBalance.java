@@ -1,22 +1,17 @@
-package mainDir;
+package mainDir.PredictionService;
 
 import mainDir.util.Colors;
 
-public class EnergyBalance {
-    private static double greenEnergy;
-    private final static int totalEnergy = 1125;
-    private static int fossileEnergy = (int) (totalEnergy - greenEnergy);
+public class EnergyBalance implements PredictionService {
+    protected static double greenEnergy;
+    protected final static int totalEnergy = 1125;
+    protected static int fossileEnergy = (int) (totalEnergy - greenEnergy);
     public static void UpdateGreenEnergy(double greenEnergy) {
 
         EnergyBalance.greenEnergy = greenEnergy;
         fossileEnergy = (int)(totalEnergy - greenEnergy);
     }
-    public static double getGreenEnergy(){
-        return greenEnergy;
-    }
-    public static int getTotalEnergy(){
-        return totalEnergy;
-    }
+
     public static void show(){
         double greenPercent = (greenEnergy / totalEnergy) * 100;
         double fossilPercent = 100 - greenPercent;

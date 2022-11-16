@@ -1,6 +1,6 @@
 package mainDir.QuizSystem;
 
-import mainDir.Forecast;
+import mainDir.PredictionService.Forecast;
 
 import java.util.ArrayList;
 import java.util.Collections;

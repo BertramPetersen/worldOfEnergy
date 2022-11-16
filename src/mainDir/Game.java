@@ -1,6 +1,9 @@
 package mainDir;
 
 
+import mainDir.PredictionService.EnergyBalance;
+import mainDir.PredictionService.Forecast;
+import mainDir.PredictionService.PredictionService;
 import mainDir.QuizSystem.Quiz;
 import mainDir.QuizSystem.QuizService;
 import mainDir.QuizSystem.RandomEvent;
@@ -21,8 +24,9 @@ public class Game implements DataService {
     public EnergySource EnergyPrice[] = {new WindMill(), new HydroPowerplant(), new SolarPanel(), new GeothermalPowerplant()};
 
     QuizService quiz;
-
     QuizService randomEvent;
+
+    PredictionService prediction;
 
     public Game() {
         this.turnCounter = 0;
@@ -33,6 +37,7 @@ public class Game implements DataService {
         createRooms();
         this.location = roomMap.get("Airport");
         this.randomEvent = new RandomEvent();
+
     }
 
     private void createRooms() {
@@ -214,8 +219,8 @@ public class Game implements DataService {
             promptEnterKey();
             System.out.println(Colors.GREEN + "Now that you know the premise of the game, you can begin to populate World of Energy with renewable energy sources to tilt the energy balance in your favor.");
             promptEnterKey();
-            System.out.println("Hello... The year is " + Forecast.currentYear + ". The C02 emission is currently " + Forecast.CO2 + " billion ton a year...");
-            System.out.println("The average temperature has already increased with " + Forecast.temperature + "\u2103, and the world's sea level has risen with " + Forecast.seaLevel + "cm...");
+            System.out.println("Hello... The year is " + PredictionService.getCurrentYear() + ". The C02 emission is currently " + PredictionService.getCO2() + " billion ton a year...");
+            System.out.println("The average temperature has already increased with " + PredictionService.getTemperature() + "\u2103, and the world's sea level has risen with " + PredictionService.getSealevel() + "cm...");
             promptEnterKey();
             System.out.println("Hurry! Tilt the energy balance towards green energy to stop the them from increasing further...\n" +
                     "Good luck!" + Colors.RESET);
