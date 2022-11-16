@@ -221,9 +221,6 @@ public class Game implements DataService {
                     "Good luck!" + Colors.RESET);
             promptEnterKey();
             System.out.println();
-
-            System.out.println(Colors.GREEN + "You can now begin to populate World of Energy with renewable energy sources" +
-                    " to tilt the energy balance in your favor" + Colors.RESET);
             getRoomDescription();
         }
     }
