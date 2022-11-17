@@ -9,6 +9,8 @@ import java.util.Scanner;
 public class RandomEvent implements QuizService{
     private int i;
 
+    Forecast forecast = new Forecast();
+
     public ArrayList<Events> events = new ArrayList<>();
 
     public RandomEvent() {
@@ -26,8 +28,9 @@ public class RandomEvent implements QuizService{
         scanner.nextLine();
     }
 
-    public void initiateRandomEvent() {
+    public void initiateRandomEvent(Forecast forecast) {
         try {
+
             System.out.println("Wait...");
             promptEnterKey();
             System.out.println("Something is off...");
@@ -39,7 +42,7 @@ public class RandomEvent implements QuizService{
             System.out.println("This will undoubtedly have consequences on the climate forecast and energy balance...");
             promptEnterKey();
             System.out.println("!ALERT!             !ALERT!             !ALERT!             !ALERT!             !ALERT!");
-            Forecast.increase(events.get(i).impact);
+            forecast.increase(events.get(i).impact);
             System.out.println("!ALERT!             !ALERT!             !ALERT!             !ALERT!             !ALERT!");
             System.out.println("Oh no! These news have terrible consequences for our forecast. It has increased with " + (int) ((events.get(i).impact * 100) - 100) + "%!");
             System.out.println();
@@ -47,7 +50,7 @@ public class RandomEvent implements QuizService{
         } catch (IndexOutOfBoundsException e) {
             i = 0;
             Collections.shuffle(events);
-            initiateRandomEvent();
+            initiateRandomEvent((Forecast) forecast);
         }
         i++;
     }

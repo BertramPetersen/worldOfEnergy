@@ -2,16 +2,30 @@ package mainDir.PredictionService;
 
 import java.time.Year;
 
-public class Forecast extends EnergyBalance{
+public class Forecast implements PredictionService {
 
-    static double seaLevel = 5; // unit cm
-    static double temperature = 2; // unit celsius
-    static double CO2 = 15; // unit billion ton
+    EnergyBalance energyBalance = new EnergyBalance();
+    public double seaLevel = 5; // unit cm
+    public double temperature = 2; // unit celsius
+    public double CO2 = 15; // unit billion ton
 
-    static double decrease = ((PredictionService.getGreenEnergy()/ PredictionService.getTotalEnergy())*100);// unit %
+    double decrease = ((energyBalance.getGreenEnergy()/ energyBalance.getTotalEnergy())*100);// unit %
 
-    static int currentYear = Year.now().getValue();
-    public static void increase(double increaseFactor) {
+    int currentYear = Year.now().getValue();
+
+    public int getCurrentYear() {
+        return currentYear;
+    }
+    public double getTemperature() {
+        return temperature;
+    }
+    public double getCO2() {
+        return CO2;
+    }
+    public double getSeaLevel() {
+        return seaLevel;
+    }
+    public void increase(double increaseFactor) {
 
         seaLevel = seaLevel * increaseFactor;
         temperature = temperature * increaseFactor;
@@ -25,49 +39,79 @@ public class Forecast extends EnergyBalance{
         System.out.println("---------------------------------------------------------------------------------------");
     }
 
-    public static void decrease(double decrease) {
+    public void decrease(double decrease) {
         seaLevel = seaLevel * decrease;
         temperature = temperature * decrease;
         CO2 = CO2 * decrease;
 
         System.out.printf("the sea level has decreased to:  %.2f cm.\n", seaLevel);
         System.out.printf("the temperature has decreased to:  %.2f degrees \n", temperature);
-        System.out.printf("the CO2 level has decreased to:  %.2f ton \n", CO2);
+        System.out.printf("the CO2 emission has decreased to:  %.2f billion ton \n", CO2);
 
     }
-    public static void update() {
-        if (PredictionService.getGreenEnergy() <= PredictionService.getTotalEnergy()) {
-            double waterIncrease = 100-((PredictionService.getGreenEnergy()/ PredictionService.getTotalEnergy())*100); // unit  %
-            double temperatureIncrease = 100-((PredictionService.getGreenEnergy()/ PredictionService.getTotalEnergy())*100); // unit %
-            double CO2Increase = 100-((PredictionService.getGreenEnergy()/ PredictionService.getTotalEnergy())*100);// unit %
 
-            seaLevel *= (1 + (waterIncrease/100));
-            temperature *=  (1 + (temperatureIncrease/100));
-            CO2 *= (1 + (CO2Increase/100));
+    public void update(EnergyBalance energyBalance) {
+        currentYear++;
+        energyBalance.updatePercentage();
+        if (energyBalance.getGreenEnergy() <= energyBalance.getFossilEnergy()) {
+            double increase = energyBalance.getFossilPercent(); // unit  %
+            double seaLevelIncrease = (0.3*(increase));
+            double temperatureIncrease = (0.2*(increase));
+            double C02Increase = (0.5*(increase));
+            seaLevel *= (1 + seaLevelIncrease/100);
+            temperature *=  (1 + temperatureIncrease/100);
+            CO2 *= (1 + C02Increase/100);
             System.out.println();
-            System.out.println("Oh no! The year is now " + currentYear + " and the world's C02 output is still rising!");
+            System.out.println("Oh no! The year is now " + currentYear + " and the world's C02 output is still increasing!");
             System.out.println("---------------------------------------------------------------------------------------");
             System.out.println("Current Stats:");
-            System.out.println("The C02 emission has increased to " + String.format("%.2f",CO2) + " billion ton. Increase per year " + CO2Increase+ "%");
-            System.out.println("The sea level has risen with " + String.format("%.2f",seaLevel) + "cm. Increase per year " + waterIncrease + "%");
-            System.out.println("The average temperature has risen to " + String.format("%.2f",temperature) + "\u2103. Increase per year " + temperatureIncrease+ "%");
+            System.out.println("The C02 emission has increased to " + String.format("%.2f",CO2) + " billion ton. Increase per year " + String.format("%.2f",C02Increase) + "%");
+            System.out.println("The sea level has risen with " + String.format("%.2f",seaLevel) + "cm. Increase per year " + String.format("%.2f",seaLevelIncrease) + "%");
+            System.out.println("The average temperature has risen to " + String.format("%.2f",temperature) + "\u2103. Increase per year " + String.format("%.2f",temperatureIncrease)+ "%");
             System.out.println("---------------------------------------------------------------------------------------");
 
         } else {
-            double decrease = ((PredictionService.getGreenEnergy()/ PredictionService.getTotalEnergy())*100);// unit %
-            seaLevel *= (decrease/100);
-            temperature *= (decrease/100);
-            CO2 *= (decrease/100);
+            double decrease = energyBalance.getGreenPercent();// unit %
+            double seaLevelDecrease = (0.6 *(decrease));
+            double temperatureDecrease = (0.4 *(decrease));
+            double C02Decrease = (1 * (decrease));
+
+            seaLevel *= (0.6 * decrease/100);
+            temperature *= (0.4 * decrease/100);
+            CO2 *= (1 * decrease/100);
+
             System.out.println();
             System.out.println("Good job! The year is now " + currentYear + " and the world's C02 output is finally falling");
             System.out.println("---------------------------------------------------------------------------------------");
             System.out.println("Current Stats:");
-            System.out.println("The C02 emission has increased to " + String.format("%.2f",CO2) + ". Decrease per year " + decrease + "%");
-            System.out.println("The sea level has risen with " + String.format("%.2f",seaLevel) + ". Decrease per year " + decrease + "%");
-            System.out.println("The average temperature has risen to " + String.format("%.2f",temperature) + ". Decrease per year " + decrease + "%");
+            System.out.println("The C02 emission has decreased to " + String.format("%.2f",CO2) + ". Decrease per year " + String.format("%.2f",C02Decrease) + "%");
+            System.out.println("The sea level has fallen with " + String.format("%.2f",seaLevel) + ". Decrease per year " + String.format("%.2f",seaLevelDecrease) + "%");
+            System.out.println("The average temperature has fallen to " + String.format("%.2f",temperature) + ". Decrease per year " + String.format("%.2f",temperatureDecrease) + "%");
             System.out.println("---------------------------------------------------------------------------------------");
         }
-        currentYear++;
+    }
+    @Override
+    public void show() {
+
+    }
+
+    @Override
+    public void UpdateGreenEnergy(double greenEnergy) {
+
+    }
+    @Override
+    public double getGreenEnergy() {
+        return 0;
+    }
+
+    @Override
+    public double getTotalEnergy() {
+        return 0;
+    }
+
+    @Override
+    public double getFossilEnergy() {
+        return 0;
     }
 }
 
