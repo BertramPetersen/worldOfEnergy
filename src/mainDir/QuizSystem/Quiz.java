@@ -1,5 +1,6 @@
 package mainDir.QuizSystem;
 
+import mainDir.PredictionService.Forecast;
 import mainDir.Wallet;
 
 import java.util.ArrayList;
@@ -197,6 +198,6 @@ public class Quiz implements QuizService {
 
 
     @Override
-    public void initiateRandomEvent(){}
+    public void initiateRandomEvent(Forecast forecast){}
 }
 

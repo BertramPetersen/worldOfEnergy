@@ -27,7 +27,8 @@ public class Game implements DataService {
     QuizService randomEvent;
 
     PredictionService prediction;
-
+    PredictionService energyBalance;
+    PredictionService forecast;
     public Game() {
         this.turnCounter = 0;
         createdRooms = new ArrayList<>();
@@ -37,8 +38,9 @@ public class Game implements DataService {
         createRooms();
         this.location = roomMap.get("Airport");
         this.randomEvent = new RandomEvent();
-
-    }
+        this.energyBalance = new EnergyBalance();
+        this.forecast = new Forecast();
+        }
 
     private void createRooms() {
         roomMap = new HashMap<>();
@@ -133,11 +135,11 @@ public class Game implements DataService {
     @Override
     public void updateTurn(){
         turnCounter++;
-        EnergyBalance.UpdateGreenEnergy(getTotalPowerOutput());
-        Forecast.update();
+        energyBalance.UpdateGreenEnergy(getTotalPowerOutput());
+        forecast.update((EnergyBalance) energyBalance);
         System.out.println();
         updatePassiveIncome();
-        EnergyBalance.show();
+        energyBalance.show();
         promptEnterKey();
         playQuizOrRandomEvent();
     }
@@ -153,13 +155,13 @@ public class Game implements DataService {
             quiz.takeQuiz();
         }
         else if (x >= 0.7) { // There is a 30% chance of a random event when quiz is not being run
-            randomEvent.initiateRandomEvent();
+            randomEvent.initiateRandomEvent((Forecast) forecast);
         }
     }
     public void playQuizOrRandomEvent() { // 2. version of play quiz or random event
         double x = Math.random();
         if (x >= 0.8 && turnCounter >= 3) { // RandomEvent has a 20% chance of being run after the 3rd round
-            randomEvent.initiateRandomEvent();
+            randomEvent.initiateRandomEvent((Forecast) forecast);
         } else if (x <= 0.7 || turnCounter < 3) { // takeQuiz has a 70% chance of being run. But is always run in the 2 first rounds
             quiz.takeQuiz();   // This implies to things: 1. Quiz and Random Event cannot happen in the same round. 2. There is a 10% chance neither is run.
         }
@@ -213,16 +215,16 @@ public class Game implements DataService {
             System.out.println();
             System.out.println("You can build energy source to passively earn you money:");
             System.out.printf("%-32s %s\n", "Windmill = 40 coins", "Solar Panel = 20 coins");
-            System.out.printf("%-32s %s\n", "Hydro Powerplant = 140 coins", "Geo Powerplant = 390 coins");
+            System.out.printf("%-32s %s\n", "Hydro Power-plant = 140 coins", "Geo Power-plant = 390 coins");
             promptEnterKey();
             System.out.println("You can also earn additional money by correctly answering the quiz questions, which will appear after you have finished your turn.");
             promptEnterKey();
             System.out.println(Colors.GREEN + "Now that you know the premise of the game, you can begin to populate World of Energy with renewable energy sources to tilt the energy balance in your favor.");
             promptEnterKey();
-            System.out.println("Hello... The year is " + PredictionService.getCurrentYear() + ". The C02 emission is currently " + PredictionService.getCO2() + " billion ton a year...");
-            System.out.println("The average temperature has already increased with " + PredictionService.getTemperature() + "\u2103, and the world's sea level has risen with " + PredictionService.getSealevel() + "cm...");
+            System.out.println("Hello... The year is " + forecast.getCurrentYear() + ". The C02 emission is currently " + forecast.getCO2() + " billion ton a year...");
+            System.out.println("The average temperature has already increased with " + forecast.getTemperature() + "\u2103, and the world's sea level has risen with " + forecast.getSeaLevel() + "cm...");
             promptEnterKey();
-            System.out.println("Hurry! Tilt the energy balance towards green energy to stop the them from increasing further...\n" +
+            System.out.println("Hurry! Tilt the energy balance towards green energy to stop the stats from increasing further...\n" +
                     "Good luck!" + Colors.RESET);
             promptEnterKey();
             System.out.println();
