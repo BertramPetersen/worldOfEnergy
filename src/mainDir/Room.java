@@ -8,7 +8,7 @@ public class Room implements EnergySourceConstructor {
     String name;
 
     ArrayList<EnergySource> builtEnergySource = new ArrayList<>();
-    private HashMap<String, Room> exits = new HashMap<>();
+    private final HashMap<String, Room> exits = new HashMap<>();
 
     double realPowerOutput;
     int accumulativePassiveIncome;
@@ -180,16 +180,17 @@ public class Room implements EnergySourceConstructor {
     public void getLongDescription() {
         System.out.printf("Welcome to %s\n",this.name);
         System.out.printf("%-44s %s\n","This room has potential for: ", " This room currently have:");
-        System.out.printf("%-40s %-4s %s %d \n", "Potential for wind energy: "+ this.windPot, "|", "Windmills: ",getWindmillCount());
-        System.out.printf("%-40s %-4s %s %d \n","Potential for Geothermal energy: "+ this.geoPot, "|", "Geothermal powerplants: ",getGeoplantCount());
-        System.out.printf("%-40s %-4s %s %d \n","Potential for Solar energy: " +this.sunPot, "|", "Solar Panels: ",getSolarPanelCount());
-        System.out.printf("%-40s %-4s %s %d \n", "Potential for Hydropowered energy: "+ this.waterPot, "|", "Hydro powerplants: ",getWaterplantCount());
+        System.out.printf("%-40s %-4s %s %d \n", "Potential for wind energy: "+ this.windPot, "|", "Windmill(s): ",getWindmillCount());
+        System.out.printf("%-40s %-4s %s %d \n","Potential for Geothermal energy: "+ this.geoPot, "|", "Geothermal power-plant(s): ",getGeoplantCount());
+        System.out.printf("%-40s %-4s %s %d \n","Potential for Solar energy: " +this.sunPot, "|", "Solar Panel(s): ",getSolarPanelCount());
+        System.out.printf("%-40s %-4s %s %d \n", "Potential for Hydropower energy: "+ this.waterPot, "|", "Hydro power-plant(s): ",getWaterplantCount());
         System.out.println();
-        System.out.println("You currently have " + Wallet.getCoins() + " in your wallet. To build type \"build\" + either:");
-        System.out.println("Windmill\n" +
-                "Geo Powerplant\n" +
-                "Solar Panel\n" +
-                "Hydro Powerplant");
+        System.out.println("You currently have " + Wallet.getCoins() + " coins in your wallet. To build type \"build\" + either:");
+        System.out.println("""
+                Windmill
+                Geo Power-plant
+                Solar Panel
+                Hydro Power-plant""");
     }
 
     public int getWindmillCount() {

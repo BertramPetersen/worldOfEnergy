@@ -4,7 +4,7 @@ import mainDir.util.Colors;
 
 public class EnergyBalance implements PredictionService {
     protected double greenEnergy = 0;
-    protected final double totalEnergy = 1125;
+    protected double totalEnergy;
     protected double fossilEnergy =  totalEnergy - greenEnergy;
     protected double greenPercent;
     protected double fossilPercent;
@@ -48,6 +48,10 @@ public class EnergyBalance implements PredictionService {
 
     public double getFossilPercent() {
         return fossilPercent;
+    }
+
+    public void setTotalEnergy(double totalEnergy) {
+        this.totalEnergy = totalEnergy;
     }
 
     @Override

@@ -29,6 +29,10 @@ public class Game implements DataService {
     PredictionService prediction;
     PredictionService energyBalance;
     PredictionService forecast;
+    Difficulty EASY = Difficulty.EASY;
+    Difficulty MEDIUM = Difficulty.Medium;
+    Difficulty HARD = Difficulty.HARD;
+
     public Game() {
         this.turnCounter = 0;
         createdRooms = new ArrayList<>();
@@ -40,7 +44,7 @@ public class Game implements DataService {
         this.randomEvent = new RandomEvent();
         this.energyBalance = new EnergyBalance();
         this.forecast = new Forecast();
-        }
+    }
 
     private void createRooms() {
         roomMap = new HashMap<>();
@@ -85,6 +89,7 @@ public class Game implements DataService {
             }
         }
     }
+
     @Override
     public boolean goRoom(Command command) {
         if (!command.hasCommandValue()) {
@@ -112,6 +117,7 @@ public class Game implements DataService {
     public Command getCommand(String word1, String word2) {
         return new CommandImplementation(commands.getCommand(word1), word2);
     }
+
     @Override
     public void getRoomDescription() {
         if (this.location.getName().equals("Airport")) {
@@ -128,12 +134,13 @@ public class Game implements DataService {
     }
 
     @Override
-    public List<String> getCommandDescription(){
+    public List<String> getCommandDescription() {
         System.out.println(this.location.getName());
         return commands.getCommandWords();
     }
+
     @Override
-    public void updateTurn(){
+    public void updateTurn() {
         turnCounter++;
         energyBalance.UpdateGreenEnergy(getTotalPowerOutput());
         forecast.update((EnergyBalance) energyBalance);
@@ -145,19 +152,20 @@ public class Game implements DataService {
     }
 
     public void updatePassiveIncome() {
-        for (Room room : createdRooms){
+        for (Room room : createdRooms) {
             room.PassiveIncome();
         }
     }
+
     public void playQuizOrRandomEvent1() { // 1. version of play quiz or random event
         double x = Math.random();
         if (turnCounter % 2 == 0) { // takeQuiz is run every other turn
             quiz.takeQuiz();
-        }
-        else if (x >= 0.7) { // There is a 30% chance of a random event when quiz is not being run
+        } else if (x >= 0.7) { // There is a 30% chance of a random event when quiz is not being run
             randomEvent.initiateRandomEvent((Forecast) forecast);
         }
     }
+
     public void playQuizOrRandomEvent() { // 2. version of play quiz or random event
         double x = Math.random();
         if (x >= 0.8 && turnCounter >= 3) { // RandomEvent has a 20% chance of being run after the 3rd round
@@ -177,15 +185,15 @@ public class Game implements DataService {
     }
 
     @Override
-    public void welcome(){
+    public void welcome() {
         System.out.println("Welcome to World of Energy\n" +
                 "Press \"ENTER\" to continue...");
         promptEnterKey();
         System.out.println("Do you want an introduction to World of Energy?\n" +
                 "Y/N");
         Scanner scanner = new Scanner(System.in);
-        
-        if (!scanner.next().equalsIgnoreCase("n")){
+
+        if (!scanner.next().equalsIgnoreCase("n")) {
             System.out.println("A turn-based game where you have to save the world from global warming...");
             promptEnterKey();
             System.out.println("Your job is to build sustainable energy sources in different countries around the world, to prevent global warming from escalating...");
@@ -194,7 +202,7 @@ public class Game implements DataService {
             promptEnterKey();
             System.out.println("There is 4 energy sources each of which have their own “construction” you can build to take advantage of their respective energy potential:");
             System.out.printf("%-32s %s\n", "Wind = Windmill", "Solar = Solar Panel");
-            System.out.printf("%-32s %s\n", "Water = Hydro Powerplant", "Geothermal = Geo Powerplant");
+            System.out.printf("%-32s %s\n", "Water = Hydro Power-plant", "Geothermal = Geo Power-plant");
             promptEnterKey();
             System.out.print("The more sustainable energy sources you build, the more favorable the energy balance will become...");
             System.out.println();
@@ -227,8 +235,11 @@ public class Game implements DataService {
             System.out.println("Hurry! Tilt the energy balance towards green energy to stop the stats from increasing further...\n" +
                     "Good luck!" + Colors.RESET);
             promptEnterKey();
+            chooseDifficulty();
             System.out.println();
             getRoomDescription();
+        } else {
+            chooseDifficulty();
         }
     }
 
@@ -237,20 +248,27 @@ public class Game implements DataService {
         Scanner scanner = new Scanner(System.in);
         scanner.nextLine();
     }
+
     @Override
-    public boolean construct(String type){
+    public boolean construct(String type) {
         return this.location.constructEnergy(type);
     }
+
     @Override
-    public String whereAmI(){return location.getName();}
+    public String whereAmI() {
+        return location.getName();
+    }
+
     @Override
     public boolean quit(Command command) {
         return !command.hasCommandValue();
     }
 
-    public ArrayList<Room> getCreatedRooms() {
+    public ArrayList<Room>
+    getCreatedRooms() {
         return createdRooms;
     }
+
     @Override
     public void getPrices() {
         System.out.println("Windmills cost:                 " + this.EnergyPrice[0].getPrice());
@@ -258,5 +276,28 @@ public class Game implements DataService {
         System.out.println("Solar Panels cost:              " + this.EnergyPrice[2].getPrice());
         System.out.println("Geothermal power plants cost:   " + this.EnergyPrice[3].getPrice());
 
+    }
+
+    public void difficulty(double totalEnergy, int walletAmount) {
+        energyBalance.setTotalEnergy(totalEnergy);
+        Wallet.setCoins(walletAmount);
+    }
+
+    public void chooseDifficulty() {
+        System.out.println("Before you can play choose a difficulty: " + Colors.GREEN + "EASY, " + Colors.ORANGE + "MEDIUM, " + Colors.RED + "HARD" + Colors.RESET);
+        Scanner scanner = new Scanner(System.in);
+        String difficultyChoice = scanner.next().toUpperCase();
+
+        switch (difficultyChoice) {
+            case ("EASY") ->
+                difficulty(EASY.getTotalEnergy(), EASY.getWalletAmount());
+
+            case ("MEDIUM") ->
+                difficulty(MEDIUM.getTotalEnergy(), MEDIUM.getWalletAmount());
+
+            case ("HARD") ->
+                difficulty(HARD.getTotalEnergy(), HARD.getWalletAmount());
+
+        }
     }
 }

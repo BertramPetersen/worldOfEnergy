@@ -21,4 +21,5 @@ public interface PredictionService {
     double getTotalEnergy();
 
     double getFossilEnergy();
+    void setTotalEnergy(double totalEnergy);
 }

@@ -13,4 +13,5 @@ public interface DataService {
     String whereAmI();
     List<String> getCommandDescription();
     void getPrices();
+    void chooseDifficulty();
 }
