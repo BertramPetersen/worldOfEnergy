@@ -30,7 +30,7 @@ public class Game implements DataService {
     PredictionService energyBalance;
     PredictionService forecast;
     Difficulty EASY = Difficulty.EASY;
-    Difficulty MEDIUM = Difficulty.Medium;
+    Difficulty MEDIUM = Difficulty.MEDIUM;
     Difficulty HARD = Difficulty.HARD;
 
     public Game() {
