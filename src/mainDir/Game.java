@@ -21,29 +21,29 @@ public class Game implements DataService {
     ArrayList<Room> createdRooms;
     HashMap<String, Room> roomMap;
     private CommandWords commands;
-    public EnergySource EnergyPrice[] = {new WindMill(), new HydroPowerplant(), new SolarPanel(), new GeothermalPowerplant()};
-
+    public EnergySource[] energyPrice;
     QuizService quiz;
     QuizService randomEvent;
-
-    PredictionService prediction;
     PredictionService energyBalance;
     PredictionService forecast;
-    Difficulty EASY = Difficulty.EASY;
-    Difficulty MEDIUM = Difficulty.MEDIUM;
-    Difficulty HARD = Difficulty.HARD;
+    Difficulty EASY;
+    Difficulty MEDIUM;
+    Difficulty HARD;
 
     public Game() {
         this.turnCounter = 0;
-        createdRooms = new ArrayList<>();
+        this.createdRooms = new ArrayList<>();
         this.quiz = new Quiz();
         this.commands = new CommandWordsImplementation();
-        Wallet.setCoins(500);
         createRooms();
         this.location = roomMap.get("Airport");
         this.randomEvent = new RandomEvent();
         this.energyBalance = new EnergyBalance();
         this.forecast = new Forecast();
+        this.EASY = Difficulty.EASY;
+        this.MEDIUM = Difficulty.MEDIUM;
+        this.HARD = Difficulty.HARD;
+        this.energyPrice = new EnergySource[] { new WindMill(), new HydroPowerplant(), new SolarPanel(), new GeothermalPowerplant()};
     }
 
     private void createRooms() {
@@ -271,10 +271,10 @@ public class Game implements DataService {
 
     @Override
     public void getPrices() {
-        System.out.println("Windmills cost:                 " + this.EnergyPrice[0].getPrice());
-        System.out.println("Hydro power plants cost:        " + this.EnergyPrice[1].getPrice());
-        System.out.println("Solar Panels cost:              " + this.EnergyPrice[2].getPrice());
-        System.out.println("Geothermal power plants cost:   " + this.EnergyPrice[3].getPrice());
+        System.out.println("Windmills cost:                 " + this.energyPrice[0].getPrice());
+        System.out.println("Hydro power plants cost:        " + this.energyPrice[1].getPrice());
+        System.out.println("Solar Panels cost:              " + this.energyPrice[2].getPrice());
+        System.out.println("Geothermal power plants cost:   " + this.energyPrice[3].getPrice());
 
     }
 
