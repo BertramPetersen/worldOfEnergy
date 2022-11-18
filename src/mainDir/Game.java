@@ -298,7 +298,7 @@ public class Game implements DataService {
             case ("HARD") ->
                 difficulty(HARD.getTotalEnergy(), HARD.getWalletAmount());
             default -> {
-                System.out.println("Pick a difficulty!");
+                System.out.println("Pick a valid difficulty!");
                 chooseDifficulty();
             }
         }

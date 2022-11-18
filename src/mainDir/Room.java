@@ -185,7 +185,7 @@ public class Room implements EnergySourceConstructor {
         System.out.printf("%-40s %-4s %s %d \n","Potential for Solar energy: " +this.sunPot, "|", "Solar Panel(s): ",getSolarPanelCount());
         System.out.printf("%-40s %-4s %s %d \n", "Potential for Hydropower energy: "+ this.waterPot, "|", "Hydro power-plant(s): ",getWaterplantCount());
         System.out.println();
-        System.out.println("You currently have " + Wallet.getCoins() + " coins in your wallet. To build type \"build\" + either:");
+        System.out.println("You currently have " + Wallet.getCoins() + " coins in your wallet. To build type 'build' plus either:");
         System.out.println("""
                 Windmill
                 Geo Power-plant

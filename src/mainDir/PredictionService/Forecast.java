@@ -23,8 +23,8 @@ public class Forecast implements PredictionService {
     }
 
     /**
-     * Increases the forecast(Sea level, Temperature, C02), prints what the forecast has increased to.
-     * The increaseFactor argument must be between 1 < increaseFactor > ∞ .
+     * Increases the forecast(Sea level, Temperature, C02) then prints what the forecast has increased to.
+     * The increaseFactor argument must be between 1 < increaseFactor < ∞ .
      *
      * @param increaseFactor dictates the amount forecast(Sea level, Temperature, C02) is increased e.g. 1.5
      *
@@ -44,7 +44,7 @@ public class Forecast implements PredictionService {
     }
 
     /**
-     * Decreases the forecast(Sea level, Temperature, C02), prints what the forecast has decreased to.
+     * Decreases the forecast(Sea level, Temperature, C02) then prints what the forecast has decreased to.
      * The decreaseFactor argument must be between 0 < decreaseFactor < 1.
      *
      * @param decreaseFactor dictates by how much forecast(Sea level, Temperature, C02) is decreased e.g. 0.6
