@@ -200,10 +200,10 @@ public class Quiz implements QuizService {
 
 
     }
-    public int getcorrectAnswer(){
+    public  int getcorrectAnswer(){
         return correctCounter;
     }
-public int getincorrectAnswer(){
+public  int getincorrectAnswer(){
         return incorrectCounter;
 }
 
