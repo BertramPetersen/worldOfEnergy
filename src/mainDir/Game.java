@@ -259,4 +259,24 @@ public class Game implements DataService {
         System.out.println("Geothermal power plants cost:   " + this.EnergyPrice[3].getPrice());
 
     }
+    public void winLoose(){
+        if(this.turnCounter == 20 && (EnergyBalance.getGreenEnergy()/EnergyBalance.getTotalEnergy())*100 == 80){
+            System.out.println();
+            System.out.println("Congratulations you have won the game");
+            System.out.println("Thanks for playing the game <3");
+            System.out.println();
+            System.out.println("Press \"ENTER\" to end game");
+            promptEnterKey();
+            System.exit(0);
+
+
+        } else if (this.turnCounter == 4 && (EnergyBalance.getGreenEnergy()/ EnergyBalance.getTotalEnergy())*100 <= 50){
+            System.out.println();
+            System.out.println("you have sadly lost the game");
+            System.out.println("in this game you got: "+quiz.getCorrect()+" questions correct");
+            System.out.println("in this game you got: "+quiz.getIncorrect()+" questions incorrect");
+            System.out.println("Thanks for playing the game <3");
+            System.out.println("Press \"ENTER\" to end game");
+            promptEnterKey();
+            System.exit(0);
 }

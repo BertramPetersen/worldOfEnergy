@@ -9,6 +9,8 @@ import java.util.Scanner;
 
 public class Quiz implements QuizService {
     private int i = 0; // used in "takeQuiz"
+    private int correctCounter = 0;
+    private int incorrectCounter = 0;
 
     public Quiz(){
         createQuestions();
@@ -183,18 +185,27 @@ public class Quiz implements QuizService {
                 Wallet.addCoins(50);
                 System.out.println("You now have " + Wallet.getCoins() + " coins in your wallet");
                 i++; // Progresses to next prompt and answer in the "worldOfEnergy.mainDir.QuizSystem.Question[] questions" array
+                correctCounter++;
             } else {
                 System.out.println("Oh no! Your answer was incorrect. The correct answer was " + questions.get(i).answer + ".");
                 System.out.println("You unfortunately get 0 coins. Better luck next time!");
                 i++; // Progresses to next prompt and answer in the "questions" arraylist
+                incorrectCounter++;
             }
         } catch (IndexOutOfBoundsException e) {
             i = 0;
             Collections.shuffle(questions);
             takeQuiz();
         }
-    }
 
+
+    }
+    public int getcorrectAnswer(){
+        return correctCounter;
+    }
+public int getincorrectAnswer(){
+        return incorrectCounter;
+}
 
 
     @Override
