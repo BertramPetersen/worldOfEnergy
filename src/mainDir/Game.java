@@ -20,8 +20,8 @@ public class Game implements DataService {
     private Room location;
     ArrayList<Room> createdRooms;
     HashMap<String, Room> roomMap;
-    private CommandWords commands;
-    public EnergySource EnergyPrice[] = {new WindMill(), new HydroPowerplant(), new SolarPanel(), new GeothermalPowerplant()};
+    private final CommandWords commands;
+    public EnergySource[] EnergyPrice = {new WindMill(), new HydroPowerplant(), new SolarPanel(), new GeothermalPowerplant()};
 
     QuizService quiz;
     QuizService randomEvent;
@@ -135,7 +135,7 @@ public class Game implements DataService {
     @Override
     public void updateTurn(){
         turnCounter++;
-        energyBalance.UpdateGreenEnergy(getTotalPowerOutput());
+        energyBalance.updateEnergy(getTotalPowerOutput());
         forecast.update((EnergyBalance) energyBalance);
         System.out.println();
         updatePassiveIncome();
@@ -171,7 +171,7 @@ public class Game implements DataService {
     public double getTotalPowerOutput() {
         double p = 0;
         for (Room room : createdRooms) {
-            p += room.getRealPowerOutput();
+            p += room.getTotalGreenPowerOutput();
         }
         return p;
     }

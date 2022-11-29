@@ -8,7 +8,4 @@ public class GeothermalPowerplant extends EnergySource {
         super.name = "Geo Powerplant";
         super.passiveIncome = 390;
     }
-    public int showPrice() {
-        return price;
-    }
 }
